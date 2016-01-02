@@ -963,6 +963,9 @@ var RPGUI = RPGUI || {};
 // lib version
 RPGUI.version = 1.0;
 
+// author
+RPGUI.author = "Ronen Ness";
+
 // create and return html element for rpgui internal mechanisms
 // element is string, element type (like "div" or "p")
 // cursor is optional cursor to set
