@@ -125,6 +125,8 @@ Note that this class already change some element styling and change the cursor, 
 
 ### rpgui-container
 
+![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/frames.jpg)
+
 Container is like a form or a "window" with gui elements.
 Even though everything is inside the rpgui-content div, you should put all your RPGUI elements inside rpgui-containers.
 
@@ -183,6 +185,8 @@ To make a container draggable:
 
 ### paragraphs, links, headers, labels and span
 
+![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/paragraph.jpg)
+
 All paragraphs and header elements are automatically styled when inside the rpgui-content.
 The default font is imported from google fonts (check out imports.css for more info), and all text is white with black outline.
 
@@ -196,9 +200,13 @@ You don't need to do anything special to use these elements, just put them insid
 
 ### input & textarea
 
+![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/input.jpg)
+
 Similar to paragraphs, these elements are styled automatically when inside the rpgui-content. Use them as you would with normal HTML input and textarea elements.
 
 ### rpgui-slider
+
+![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/sliders.jpg)
 
 A rpgui-slider is like an HTML range input but with RPGUI style. 
 To create an rpgui-slider just create an input element with type="range" and class="rpgui-slider":
