@@ -350,6 +350,8 @@ This behaves like a regular rpgui-button but with a different graphics.
 
 ### hr
 
+![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/hr.jpg)
+
 RPGUI gives automatic style to any <hr> tag inside the rpgui-content. You can use <hr> tags as a nice method to separate parts of a container.
 
 In addition, there's a fancier version of an <hr> you can use with the "golden" class:
