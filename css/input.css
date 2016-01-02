@@ -3,8 +3,8 @@
 */
 
 /* input/textarea input */
-.rpgui-container input,
-.rpgui-container textarea
+.rpgui-content input,
+.rpgui-content textarea
 {
     /* set size and colors */
     -webkit-box-sizing : border-box;
@@ -34,7 +34,7 @@
 }
 
 /* textarea extra rules */
-.rpgui-container textarea
+.rpgui-content textarea
 {
     font-size: 12px;
     line-height: 22px;
@@ -44,11 +44,11 @@
 }
 
 /* selection highlight */
-.rpgui-container input::selection,
-.rpgui-container textarea::selection {
+.rpgui-content input::selection,
+.rpgui-content textarea::selection {
 	background: rgba(0,0,0,0.5);
 }
-.rpgui-container input::-moz-selection,
-.rpgui-container textarea::-moz-selection {
+.rpgui-content input::-moz-selection,
+.rpgui-content textarea::-moz-selection {
     background: rgba(0,0,0,0.5);
 }

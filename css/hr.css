@@ -3,7 +3,7 @@
 */
 
 /* rpgui hr */
-.rpgui-container hr {
+.rpgui-content hr {
     display:block;
     border:0px;
     height:10px;
@@ -11,7 +11,7 @@
 }
 
 /* rpgui golden hr */
-.rpgui-container hr.golden {
+.rpgui-content hr.golden {
     display:block;
     border:0px;
     height:10px;

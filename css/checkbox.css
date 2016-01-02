@@ -4,12 +4,12 @@
 
 /* basic checkbox */
 
-.rpgui-container input[type=checkbox].rpgui-checkbox
+.rpgui-content input[type=checkbox].rpgui-checkbox
 {
     display: none;
 }
 
-.rpgui-container input[type=checkbox].rpgui-checkbox + label
+.rpgui-content input[type=checkbox].rpgui-checkbox + label
 {
     background: url('img/checkbox-off.png') no-repeat;
     font-size: 12px;
@@ -22,7 +22,7 @@
     margin-bottom: 10px;
 }
 
-.rpgui-container input[type=checkbox].rpgui-checkbox:checked + label
+.rpgui-content input[type=checkbox].rpgui-checkbox:checked + label
 {
     background: url('img/checkbox-on.png') no-repeat;
     font-size: 12px;
@@ -35,13 +35,13 @@
 
 /* golden checkbox */
 
-.rpgui-container input[type=checkbox].rpgui-checkbox.golden + label
+.rpgui-content input[type=checkbox].rpgui-checkbox.golden + label
 {
     background: url('img/checkbox-golden-off.png') no-repeat;
     background-size: auto 100%;
 }
 
-.rpgui-container input[type=checkbox].rpgui-checkbox.golden:checked + label
+.rpgui-content input[type=checkbox].rpgui-checkbox.golden:checked + label
 {
     background: url('img/checkbox-golden-on.png') no-repeat;
     background-size: auto 100%;

@@ -4,24 +4,24 @@
 
 /* default cursor */
 .rpgui-cursor-default,
-.rpgui-container *
+.rpgui-content *
 {
     cursor: url("img/cursor/default.png"), auto;
 }
 
 /* pointer / hand cursor */
 .rpgui-cursor-point,
-.rpgui-container a,
-.rpgui-container button,
-.rpgui-container button *
+.rpgui-content a,
+.rpgui-content button,
+.rpgui-content button *
 {
     cursor: url("img/cursor/point.png") 10 0, auto !important;
 }
 
 /* for input / text selection */
 .rpgui-cursor-select,
-.rpgui-container input,
-.rpgui-container textarea
+.rpgui-content input,
+.rpgui-content textarea
 {
     cursor: url("img/cursor/select.png") 10 0, auto;
 }

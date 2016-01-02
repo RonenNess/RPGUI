@@ -159,12 +159,12 @@ inside your html file.
 
 /* basic checkbox */
 
-.rpgui-container input[type=checkbox].rpgui-checkbox
+.rpgui-content input[type=checkbox].rpgui-checkbox
 {
     display: none;
 }
 
-.rpgui-container input[type=checkbox].rpgui-checkbox + label
+.rpgui-content input[type=checkbox].rpgui-checkbox + label
 {
     background: url('img/checkbox-off.png') no-repeat;
     font-size: 12px;
@@ -177,7 +177,7 @@ inside your html file.
     margin-bottom: 10px;
 }
 
-.rpgui-container input[type=checkbox].rpgui-checkbox:checked + label
+.rpgui-content input[type=checkbox].rpgui-checkbox:checked + label
 {
     background: url('img/checkbox-on.png') no-repeat;
     font-size: 12px;
@@ -190,13 +190,13 @@ inside your html file.
 
 /* golden checkbox */
 
-.rpgui-container input[type=checkbox].rpgui-checkbox.golden + label
+.rpgui-content input[type=checkbox].rpgui-checkbox.golden + label
 {
     background: url('img/checkbox-golden-off.png') no-repeat;
     background-size: auto 100%;
 }
 
-.rpgui-container input[type=checkbox].rpgui-checkbox.golden:checked + label
+.rpgui-content input[type=checkbox].rpgui-checkbox.golden:checked + label
 {
     background: url('img/checkbox-golden-on.png') no-repeat;
     background-size: auto 100%;
@@ -369,24 +369,24 @@ inside your html file.
 
 /* default cursor */
 .rpgui-cursor-default,
-.rpgui-container *
+.rpgui-content *
 {
     cursor: url("img/cursor/default.png"), auto;
 }
 
 /* pointer / hand cursor */
 .rpgui-cursor-point,
-.rpgui-container a,
-.rpgui-container button,
-.rpgui-container button *
+.rpgui-content a,
+.rpgui-content button,
+.rpgui-content button *
 {
     cursor: url("img/cursor/point.png") 10 0, auto !important;
 }
 
 /* for input / text selection */
 .rpgui-cursor-select,
-.rpgui-container input,
-.rpgui-container textarea
+.rpgui-content input,
+.rpgui-content textarea
 {
     cursor: url("img/cursor/select.png") 10 0, auto;
 }
@@ -488,7 +488,7 @@ ul.rpgui-dropdown-imp
 */
 
 /* rpgui hr */
-.rpgui-container hr {
+.rpgui-content hr {
     display:block;
     border:0px;
     height:10px;
@@ -496,7 +496,7 @@ ul.rpgui-dropdown-imp
 }
 
 /* rpgui golden hr */
-.rpgui-container hr.golden {
+.rpgui-content hr.golden {
     display:block;
     border:0px;
     height:10px;
@@ -588,8 +588,8 @@ ul.rpgui-dropdown-imp
 */
 
 /* input/textarea input */
-.rpgui-container input,
-.rpgui-container textarea
+.rpgui-content input,
+.rpgui-content textarea
 {
     /* set size and colors */
     -webkit-box-sizing : border-box;
@@ -619,7 +619,7 @@ ul.rpgui-dropdown-imp
 }
 
 /* textarea extra rules */
-.rpgui-container textarea
+.rpgui-content textarea
 {
     font-size: 12px;
     line-height: 22px;
@@ -629,12 +629,12 @@ ul.rpgui-dropdown-imp
 }
 
 /* selection highlight */
-.rpgui-container input::selection,
-.rpgui-container textarea::selection {
+.rpgui-content input::selection,
+.rpgui-content textarea::selection {
 	background: rgba(0,0,0,0.5);
 }
-.rpgui-container input::-moz-selection,
-.rpgui-container textarea::-moz-selection {
+.rpgui-content input::-moz-selection,
+.rpgui-content textarea::-moz-selection {
     background: rgba(0,0,0,0.5);
 }
 
@@ -758,7 +758,7 @@ ul.rpgui-list-imp
 
 
 /* default gui header */
-.rpgui-container h1
+.rpgui-content h1
 {
 	/* color and border */
 	color: white;
@@ -776,7 +776,7 @@ ul.rpgui-list-imp
 
 
 /* default gui header2 */
-.rpgui-container h2
+.rpgui-content h2
 {
 	/* color and border */
 	color: white;
@@ -793,7 +793,7 @@ ul.rpgui-list-imp
 }
 
 /* default gui header3 */
-.rpgui-container h3
+.rpgui-content h3
 {
 	/* color and border */
 	color: white;
@@ -811,7 +811,7 @@ ul.rpgui-list-imp
 }
 
 /* default gui header4 */
-.rpgui-container h4
+.rpgui-content h4
 {
 	/* color and border */
 	color: white;
@@ -829,7 +829,7 @@ ul.rpgui-list-imp
 }
 
 /* default p */
-.rpgui-container p
+.rpgui-content p
 {
 	/* color and border */
 	color: white;
@@ -839,7 +839,7 @@ ul.rpgui-list-imp
 }
 
 /* default span */
-.rpgui-container span
+.rpgui-content span
 {
 	/* color and border */
 	color: white;
@@ -849,7 +849,7 @@ ul.rpgui-list-imp
 }
 
 /* default gui link */
-.rpgui-container a
+.rpgui-content a
 {
 	/* color and border */
 	color: yellow;
@@ -859,13 +859,13 @@ ul.rpgui-list-imp
 	text-decoration: none;
 }
 /* default gui link */
-.rpgui-container a:hover
+.rpgui-content a:hover
 {
 	text-decoration: underline;
 }
 
 /* default gui label */
-.rpgui-container label
+.rpgui-content label
 {
 	/* color and border */
 	color: white;
@@ -876,7 +876,7 @@ ul.rpgui-list-imp
 }
 
 /* default gui label */
-.rpgui-container li
+.rpgui-content li
 {
 	/* color and border */
 	margin-left:20px;
@@ -979,12 +979,12 @@ ul.rpgui-list-imp
 
 /* radio box */
 
-.rpgui-container input[type=radio].rpgui-radio
+.rpgui-content input[type=radio].rpgui-radio
 {
     display: none;
 }
 
-.rpgui-container input[type=radio].rpgui-radio + label
+.rpgui-content input[type=radio].rpgui-radio + label
 {
     background: url('img/radio-off.png') no-repeat;
     font-size: 12px;
@@ -997,7 +997,7 @@ ul.rpgui-list-imp
     margin-bottom: 8px;
 }
 
-.rpgui-container input[type=radio].rpgui-radio:checked + label
+.rpgui-content input[type=radio].rpgui-radio:checked + label
 {
     background: url('img/radio-on.png') no-repeat;
     font-size: 12px;
@@ -1010,13 +1010,13 @@ ul.rpgui-list-imp
 
 /* golden radio */
 
-.rpgui-container .rpgui-radio.golden + label
+.rpgui-content .rpgui-radio.golden + label
 {
     background: url('img/radio-golden-off.png') no-repeat !important;
     background-size: auto 100% !important;
 }
 
-.rpgui-container .rpgui-radio.golden:checked + label
+.rpgui-content .rpgui-radio.golden:checked + label
 {
     background: url('img/radio-golden-on.png') no-repeat !important;
     background-size: auto 100% !important;

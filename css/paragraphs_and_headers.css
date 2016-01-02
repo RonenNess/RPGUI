@@ -4,7 +4,7 @@
 
 
 /* default gui header */
-.rpgui-container h1
+.rpgui-content h1
 {
 	/* color and border */
 	color: white;
@@ -22,7 +22,7 @@
 
 
 /* default gui header2 */
-.rpgui-container h2
+.rpgui-content h2
 {
 	/* color and border */
 	color: white;
@@ -39,7 +39,7 @@
 }
 
 /* default gui header3 */
-.rpgui-container h3
+.rpgui-content h3
 {
 	/* color and border */
 	color: white;
@@ -57,7 +57,7 @@
 }
 
 /* default gui header4 */
-.rpgui-container h4
+.rpgui-content h4
 {
 	/* color and border */
 	color: white;
@@ -75,7 +75,7 @@
 }
 
 /* default p */
-.rpgui-container p
+.rpgui-content p
 {
 	/* color and border */
 	color: white;
@@ -85,7 +85,7 @@
 }
 
 /* default span */
-.rpgui-container span
+.rpgui-content span
 {
 	/* color and border */
 	color: white;
@@ -95,7 +95,7 @@
 }
 
 /* default gui link */
-.rpgui-container a
+.rpgui-content a
 {
 	/* color and border */
 	color: yellow;
@@ -105,13 +105,13 @@
 	text-decoration: none;
 }
 /* default gui link */
-.rpgui-container a:hover
+.rpgui-content a:hover
 {
 	text-decoration: underline;
 }
 
 /* default gui label */
-.rpgui-container label
+.rpgui-content label
 {
 	/* color and border */
 	color: white;
@@ -122,7 +122,7 @@
 }
 
 /* default gui label */
-.rpgui-container li
+.rpgui-content li
 {
 	/* color and border */
 	margin-left:20px;

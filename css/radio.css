@@ -4,12 +4,12 @@
 
 /* radio box */
 
-.rpgui-container input[type=radio].rpgui-radio
+.rpgui-content input[type=radio].rpgui-radio
 {
     display: none;
 }
 
-.rpgui-container input[type=radio].rpgui-radio + label
+.rpgui-content input[type=radio].rpgui-radio + label
 {
     background: url('img/radio-off.png') no-repeat;
     font-size: 12px;
@@ -22,7 +22,7 @@
     margin-bottom: 8px;
 }
 
-.rpgui-container input[type=radio].rpgui-radio:checked + label
+.rpgui-content input[type=radio].rpgui-radio:checked + label
 {
     background: url('img/radio-on.png') no-repeat;
     font-size: 12px;
@@ -35,13 +35,13 @@
 
 /* golden radio */
 
-.rpgui-container .rpgui-radio.golden + label
+.rpgui-content .rpgui-radio.golden + label
 {
     background: url('img/radio-golden-off.png') no-repeat !important;
     background-size: auto 100% !important;
 }
 
-.rpgui-container .rpgui-radio.golden:checked + label
+.rpgui-content .rpgui-radio.golden:checked + label
 {
     background: url('img/radio-golden-on.png') no-repeat !important;
     background-size: auto 100% !important;
