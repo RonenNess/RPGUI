@@ -27,8 +27,8 @@ The following are the key features of RPGUI:
 - A collection of build-in icons for rpgs.
 - Neat checkboxes and Radio buttons.
 - Styled buttons.
-- Sophisticated dropdown widget (based on <select>).
-- Pretty listbox (based on <select>).
+- Sophisticated dropdown widget (based on &lt;select&gt;).
+- Pretty listbox (based on &lt;select&gt;).
 - Very easy to use. Create game GUI in seconds with only plain html code.
 - No dependencies, works right out of the box!
 - Very lightweight - just 25kb of css/js, + 1.35Mb of resources (images).
@@ -292,8 +292,8 @@ Here's how to use the icons:
 
 ![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/dropdown.jpg)
 
-This class is used for <select> with <option> tags, and it creates a dropdown select widget with the RPGUI design.
-To use it create a <select> tag with <option>s inside, and add the "rpgui-dropdown" class to the <select> parent tag.
+This class is used for &lt;select&gt; with &lt;option&gt; tags, and it creates a dropdown select widget with the RPGUI design.
+To use it create a &lt;select&gt; tag with &lt;option&gt;s inside, and add the "rpgui-dropdown" class to the &lt;select&gt; parent tag.
 
 For example:
 
@@ -306,14 +306,14 @@ For example:
 ```
 
 Note that once the page is fully loaded and the rpgui dropdown is created, you can no longer add new options to it.
-To use the dropdown just use the <select> tag as you would normally do, but remember you can also use the RPGUI.set_value() and RPGUI.get_value() if you are uncertain.
+To use the dropdown just use the &lt;select&gt; tag as you would normally do, but remember you can also use the RPGUI.set_value() and RPGUI.get_value() if you are uncertain.
 
 ### rpgui-list
 
 ![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/list.jpg)
 
-This class is used for <select> with <option> tags, and it creates a list select widget with the RPGUI design.
-To use it create a <select> tag with <option>s inside, and add the "rpgui-list" class to the <select> parent tag.
+This class is used for &lt;select&gt; with &lt;option&gt; tags, and it creates a list select widget with the RPGUI design.
+To use it create a &lt;select&gt; tag with &lt;option&gt;s inside, and add the "rpgui-list" class to the &lt;select&gt; parent tag.
 
 For example:
 
@@ -326,7 +326,7 @@ For example:
 ```
 
 Note that once the page is fully loaded and the rpgui list is created, you can no longer add new options to it.
-To use the dropdown just use the <select> tag as you would normally do, but remember you can also use the RPGUI.set_value() and RPGUI.get_value() if you are uncertain.
+To use the dropdown just use the &lt;select&gt; tag as you would normally do, but remember you can also use the RPGUI.set_value() and RPGUI.get_value() if you are uncertain.
 
 ### rpgui-button
 
@@ -352,9 +352,9 @@ This behaves like a regular rpgui-button but with a different graphics.
 
 ![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/hr.jpg)
 
-RPGUI gives automatic style to any <hr> tag inside the rpgui-content. You can use <hr> tags as a nice method to separate parts of a container.
+RPGUI gives automatic style to any &lt;hr&gt; tag inside the rpgui-content. You can use &lt;hr&gt; tags as a nice method to separate parts of a container.
 
-In addition, there's a fancier version of an <hr> you can use with the "golden" class:
+In addition, there's a fancier version of an &lt;hr&gt; you can use with the "golden" class:
 
 ```html
 <hr class="golden">
@@ -371,7 +371,7 @@ For example:
 <input class="rpgui-checkbox" type="checkbox"><label>This is checkbox.</label>
 ```
 
-That the RPGUI implement the checkbox by hiding the original checkbox input and link the <label> style to its state. Using JavaScript events, clicking the label will change the checkbox state.
+That the RPGUI implement the checkbox by hiding the original checkbox input and link the &lt;label&gt; style to its state. Using JavaScript events, clicking the label will change the checkbox state.
 
 You can use the checkbox just as you would with a regular checkbox element (don't worry about the label thing), or use RPGUI.set_value() and RPGUI.get_value() if you are unsure.
 
@@ -394,7 +394,7 @@ For example:
 <input class="rpgui-radio" type="radio" value="some val"><label>This is radio button!</label>
 ```
 
-That the RPGUI implement the radio by hiding the original radio input and link the <label> style to its state. Using JavaScript events, clicking the label will change the radio state.
+That the RPGUI implement the radio by hiding the original radio input and link the &lt;label&gt; style to its state. Using JavaScript events, clicking the label will change the radio state.
 
 You can use the radio just as you would with a regular radio element (don't worry about the label thing), or use RPGUI.set_value() and RPGUI.get_value() if you are unsure.
 
