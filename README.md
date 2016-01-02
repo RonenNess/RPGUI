@@ -34,14 +34,14 @@ The following are the key features of RPGUI:
 - No dependencies, works right out of the box!
 - Very lightweight - just 25kb of css/js, + 1.35Mb of resources (images).
 
-RPGUI should work on all modern browsers, and its tested and confirmed on Chrome, FireFox, and Internet Explorer edge*.
+RPGUI should work on all modern browsers, and its tested and confirmed on Chrome, FireFox, Opera, and Internet Explorer edge*.
 
 #### A word about IE
 
-On IE Edge some minor things don't work properly, like cursors (IE demand full path instead of relative path) and blurry instead of pixelated pictures (IE don't let you choose pictures magnifier filter).
-This is because IE refuse to follow the industry css standards and apparently feel too special to work like everyone else. 
+On IE Edge some minor things don't work properly, like cursors (IE demand full path instead of relative path), blurry instead of pixelated pictures (IE don't let you choose pictures magnifier filter) and other minor things.
+I guess some of it can be fixed with some extra css rules (and maybe extra set of high-res textures for IE), but I chose not to go that extra mile just for IE.
 
-I guess it can be fixed with some tweaking to the css files, but anyway if you develop a web game and want IE support this will be the least of your problems...
+Anyway if you develop a web game and want full IE support, these things will be the least of your problems...
 
 ## How to use
 
