@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>RPGUI - Sliders and Bars</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<!-- include rpgui -->
+	<link href="../dist/rpgui.css" rel="stylesheet" type="text/css" >
+	<script src="../dist/rpgui.js"></script>
+
+    <style>
+        body
+        {
+            background: #aaf;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- all rpgui elements must be inside the rpgui-content -->
+	<div class="rpgui-content">
+
+        <div class="rpgui-container framed rpgui-draggable" style="height:450px; width:300px; top: 50px; left: 50px;">
+            <p>RPGUI slider</p>
+            <hr />
+            <label>Game volume:</label>
+            <input class="rpgui-slider" type="range" min="0" max="10" value="8" style="width:100%">
+            <label>Music volume:</label>
+            <input class="rpgui-slider" type="range" min="0" max="10" value="5" style="width:100%">
+            <hr />
+            <label>Game Difficulty:</label>
+            <input class="rpgui-slider golden" type="range" min="1" max="5" value="3" style="width:100%">
+        </div>
+
+        <div class="rpgui-container framed rpgui-draggable" style="height:450px; width:300px; top: 50px; left: 350px;">
+            <p>RPGUI prograss bars</p>
+            <hr />
+            <label>Health:</label>
+            <div id="hp-bar" class="rpgui-progress red"></div>
+            <label>Mana:</label>
+            <div id="mana-bar" class="rpgui-progress blue"></div>
+            <label>Stamina:</label>
+            <div id="stamina-bar" class="rpgui-progress green"></div>
+            <label>XP:</label>
+            <div id="xp-bar" class="rpgui-progress"></div>
+        </div>
+
+        <div class="rpgui-container framed rpgui-draggable" style="height:450px; width:300px; top: 50px; left: 650px;">
+            <p>Test progress bars</p>
+            <hr />
+            <label>Set health:</label>
+            <input class="rpgui-slider" id="set-hp" type="range" min="0" max="10" value="10" style="width:100%">
+            <label>Set mana:</label>
+            <input class="rpgui-slider" id="set-mana" type="range" min="0" max="10" value="10" style="width:100%">
+            <label>Set stamina:</label>
+            <input class="rpgui-slider" id="set-stamina" type="range" min="0" max="10" value="10" style="width:100%">
+            <label>Set XP:</label>
+            <input class="rpgui-slider" id="set-xp" type="range" min="0" max="10" value="10" style="width:100%">
+        </div>
+
+        <script>
+
+            // link slider to progress bar
+            function init_progress_control(name)
+            {
+                (function(name)
+                {
+                    var slider = document.getElementById("set-" + name);
+                    slider.onchange = function()
+                    {
+                        var progress = document.getElementById(name + "-bar");
+                        RPGUI.set_value(progress, slider.value / 10);
+                    }
+                })(name);
+            }
+
+            init_progress_control("hp");
+            init_progress_control("mana");
+            init_progress_control("stamina");
+            init_progress_control("xp");
+
+        </script>
+
+	</div>
+</body>

@@ -1,0 +1,48 @@
+/**
+* style for radioes
+*/
+
+/* radio box */
+
+.rpgui-container input[type=radio].rpgui-radio
+{
+    display: none;
+}
+
+.rpgui-container input[type=radio].rpgui-radio + label
+{
+    background: url('img/radio-off.png') no-repeat;
+    font-size: 12px;
+	line-height: 24px;
+    display: inline-block;
+    background-size: auto 100%;
+    padding-left: 34px;
+    height: 24px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.rpgui-container input[type=radio].rpgui-radio:checked + label
+{
+    background: url('img/radio-on.png') no-repeat;
+    font-size: 12px;
+	line-height: 24px;
+    display: inline-block;
+    background-size: auto 100%;
+    padding-left: 34px;
+    height: 24px;
+}
+
+/* golden radio */
+
+.rpgui-container .rpgui-radio.golden + label
+{
+    background: url('img/radio-golden-off.png') no-repeat !important;
+    background-size: auto 100% !important;
+}
+
+.rpgui-container .rpgui-radio.golden:checked + label
+{
+    background: url('img/radio-golden-on.png') no-repeat !important;
+    background-size: auto 100% !important;
+}

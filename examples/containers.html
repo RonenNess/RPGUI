@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>RPGUI - Containers</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<!-- include rpgui -->
+	<link href="../dist/rpgui.css" rel="stylesheet" type="text/css" >
+	<script src="../dist/rpgui.js"></script>
+
+    <style>
+        body
+        {
+            background: #aaf;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- all rpgui elements must be inside the rpgui-content -->
+	<div class="rpgui-content">
+        <div class="rpgui-container framed" style="height:300px; width:260px; top: 50px; left: 50px;">
+            <p>This is a basic rpgui-container with "framed" class.</p>
+            <div class="rpgui-container framed-grey" style="height:140px; width:160px; top: 0px; left: 0px;">
+            <p>[Internal grey frame].</p>
+        </div>
+        </div>
+
+        <div class="rpgui-container framed-golden" style="height:300px; width:260px; top: 50px; left: 350px;">
+            <p>This is a basic rpgui-container with "framed-golden" class.</p>
+        </div>
+
+        <div class="rpgui-container framed-golden-2" style="height:300px; width:260px; top: 50px; left: 650px;">
+            <p>This is a basic rpgui-container with "framed-golden-2" class.</p>
+        </div>
+
+        <div class="rpgui-container" style="height:300px; width:260px; top: 360px; left: 50px;">
+            <p>You don't have to use frames though. This text is inside a 'rpgui-container' but without a frame.</p>
+        </div>
+
+        <div class="rpgui-container framed-grey" style="height:300px; width:260px; top: 360px; left: 350px;">
+            <p>This is a grey-framed container ("framed-grey" class).</p>
+        </div>
+
+        <div class="rpgui-container framed rpgui-draggable" style="height:300px; width:260px; top: 360px; left: 650px;">
+            <p>And this one is draggable!<br/><br/>Go ahead, try and drag me ^_^</p>
+            <label>(note: you can't grab on the text, you need to grab on empty frame)</label>
+        </div>
+	</div>
+</body>

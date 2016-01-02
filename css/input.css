@@ -1,0 +1,54 @@
+/**
+* input styling
+*/
+
+/* input/textarea input */
+.rpgui-container input,
+.rpgui-container textarea
+{
+    /* set size and colors */
+    -webkit-box-sizing : border-box;
+    -moz-box-sizing : border-box;
+    box-sizing : border-box;
+	color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	font-size: 14px;
+	line-height: 32px;
+	background: #4e4a4e;
+	max-width: 100%;
+	width: 100%;
+	padding-left:10px;
+
+	/* for ie */
+	min-height: 30px;
+
+	/* enable text selecting */
+	-webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+	-webkit-tap-highlight-color: rgba(0,0,0,0.5);
+
+}
+
+/* textarea extra rules */
+.rpgui-container textarea
+{
+    font-size: 12px;
+    line-height: 22px;
+    padding-top: 7px;
+    height: 80px;
+    resize: none;
+}
+
+/* selection highlight */
+.rpgui-container input::selection,
+.rpgui-container textarea::selection {
+	background: rgba(0,0,0,0.5);
+}
+.rpgui-container input::-moz-selection,
+.rpgui-container textarea::-moz-selection {
+    background: rgba(0,0,0,0.5);
+}

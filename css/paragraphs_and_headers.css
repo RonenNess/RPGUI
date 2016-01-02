@@ -1,0 +1,134 @@
+/**
+* Paragraphs and headers while inside an rpgui container.
+*/
+
+
+/* default gui header */
+.rpgui-container h1
+{
+	/* color and border */
+	color: white;
+	font-weight: 1;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 110%;
+
+	/* center text */
+	text-align: center;
+
+	/* padding */
+	padding 0 0 0 0;
+	margin: 7px 7px 17px 7px;
+}
+
+
+/* default gui header2 */
+.rpgui-container h2
+{
+	/* color and border */
+	color: white;
+	font-weight: 1;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 100%;
+
+	/* center text */
+	text-align: center;
+
+	/* padding */
+	padding 0 0 0 0;
+	margin: 7px 7px 17px 7px;
+}
+
+/* default gui header3 */
+.rpgui-container h3
+{
+	/* color and border */
+	color: white;
+	font-weight: 1;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 90%;
+    text-decoration: underline;
+
+	/* center text */
+	text-align: center;
+
+	/* padding */
+	padding 0 0 0 0;
+	margin: 7px 7px 17px 7px;
+}
+
+/* default gui header4 */
+.rpgui-container h4
+{
+	/* color and border */
+	color: white;
+	font-weight: 1;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 80%;
+    text-decoration: underline;
+
+	/* center text */
+	text-align: center;
+
+	/* padding */
+	padding 0 0 0 0;
+	margin: 7px 7px 17px 7px;
+}
+
+/* default p */
+.rpgui-container p
+{
+	/* color and border */
+	color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	font-size: 12px;
+	line-height: 22px;
+}
+
+/* default span */
+.rpgui-container span
+{
+	/* color and border */
+	color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	font-size: 12px;
+	line-height: 22px;
+}
+
+/* default gui link */
+.rpgui-container a
+{
+	/* color and border */
+	color: yellow;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	font-size: 12px;
+	line-height: 22px;
+	text-decoration: none;
+}
+/* default gui link */
+.rpgui-container a:hover
+{
+	text-decoration: underline;
+}
+
+/* default gui label */
+.rpgui-container label
+{
+	/* color and border */
+	color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	font-size: 10px;
+	line-height: 20px;
+	display: inline;
+}
+
+/* default gui label */
+.rpgui-container li
+{
+	/* color and border */
+	margin-left:20px;
+	color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	font-size: 12px;
+	line-height: 22px;
+}
+

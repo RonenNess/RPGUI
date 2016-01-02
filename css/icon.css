@@ -1,0 +1,72 @@
+/**
+* Icon styles.
+*/
+
+.rpgui-icon {
+
+    display: inline-block;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+}
+
+.rpgui-icon.sword {
+    background-image: url('img/icons/sword.png');
+}
+
+.rpgui-icon.shield {
+    background-image: url('img/icons/shield.png');
+}
+
+.rpgui-icon.exclamation {
+    background-image: url('img/icons/exclamation.png');
+}
+
+.rpgui-icon.potion-red {
+    background-image: url('img/icons/potion-red.png');
+}
+
+.rpgui-icon.potion-green {
+    background-image: url('img/icons/potion-green.png');
+}
+
+.rpgui-icon.potion-blue {
+    background-image: url('img/icons/potion-blue.png');
+}
+
+.rpgui-icon.weapon-slot {
+    background-image: url('img/icons/weapon-slot.png');
+}
+
+.rpgui-icon.shield-slot {
+    background-image: url('img/icons/shield-slot.png');
+}
+
+.rpgui-icon.armor-slot {
+    background-image: url('img/icons/armor-slot.png');
+}
+
+.rpgui-icon.helmet-slot {
+    background-image: url('img/icons/helmet-slot.png');
+}
+
+.rpgui-icon.ring-slot {
+    background-image: url('img/icons/ring-slot.png');
+}
+
+.rpgui-icon.potion-slot {
+    background-image: url('img/icons/potion-slot.png');
+}
+
+.rpgui-icon.magic-slot {
+    background-image: url('img/icons/magic-slot.png');
+}
+
+.rpgui-icon.shoes-slot {
+    background-image: url('img/icons/shoes-slot.png');
+}
+
+.rpgui-icon.empty-slot {
+    background-image: url('img/icons/empty-slot.png');
+}

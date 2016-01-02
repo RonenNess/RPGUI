@@ -1,0 +1,87 @@
+/**
+* Customized dropdown with rpgui design.
+*/
+
+/* dropdown box implemented with list (see rpgui-dropdown.js for details) */
+/* note! this class rule affect both the dropdown header and the list elements! */
+.rpgui-dropdown-imp,
+.rpgui-dropdown
+{
+	/* font */
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    color: white;
+	font-size: 12px;
+
+	/* default size */
+	min-height: 40px;
+	margin-top: 0px;
+
+	/* border */
+	border-style: solid;
+	border-width: 7px 7px 7px 7px;
+	-moz-border-image: url("img/select-border-image.png") 10% repeat repeat;
+	-webkit-border-image: url("img/select-border-image.png") 10% repeat repeat;
+	-o-border-image: url("img/select-border-image.png") 10% repeat repeat;
+	border-image: url("img/select-border-image.png") 10% repeat repeat;
+
+	/* background */
+	background: url("img/select-background-image.png") repeat repeat;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	background-position: center;
+}
+
+
+/* dropdown options list */
+ul.rpgui-dropdown-imp
+{
+	padding: 0 0 0 0 !important;
+	z-index: 100;
+}
+
+/* note! this affect only the dropdown header */
+/* shows the currently selected value from select element */
+.rpgui-dropdown-imp-header
+{
+	color: white !important;
+	min-height: 22px !important;
+	padding: 5px 10px 0 10px !important;
+	margin: 0 0 0 0 !important;
+	position: relative !important;
+}
+
+/* dropdown options */
+.rpgui-dropdown-imp li
+{
+	/* font */
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    color: white;
+	font-size: 12px;
+	height: 16px;
+
+	/* remove the dot */
+	list-style-type: none;
+
+	/* padding */
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+
+	/* background */
+	background: url("img/select-background-image.png") repeat repeat;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	background-position: center;
+}
+
+/* dropdown options hover */
+.rpgui-dropdown-imp li:hover
+{
+	color: yellow;
+}
+
+/* dropdown hover */
+.rpgui-dropdown-imp:hover
+{
+	color: yellow;
+}

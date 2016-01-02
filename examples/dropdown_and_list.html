@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>RPGUI - Dropdown and List</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<!-- include rpgui -->
+	<link href="../dist/rpgui.css" rel="stylesheet" type="text/css" >
+	<script src="../dist/rpgui.js"></script>
+
+    <style>
+        body
+        {
+            background: #aaf;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- all rpgui elements must be inside the rpgui-content -->
+	<div class="rpgui-content">
+
+        <div class="rpgui-container framed rpgui-draggable" style="height:320px; width:290px; top: 50px; left: 50px;">
+            <p>RPGUI dropdown</p>
+            <hr />
+            <label>Select your class:</label>
+            <select class="rpgui-dropdown">
+                <option value="Warrior" selected>Warrior</option>
+                <option value="Mage">Mage</option>
+                <option value="Rogue">Rogue</option>
+                <option value="Ranger">Ranger</option>
+            </select>
+            <br />
+            <label>Select race:</label>
+            <select class="rpgui-dropdown">
+                <option value="Human" selected>Human</option>
+                <option value="Orc">Orc</option>
+                <option value="Elf">Elf</option>
+                <option value="Dwarf">Dwarf</option>
+            </select>
+        </div>
+
+        <div class="rpgui-container framed rpgui-draggable" style="height:320px; width:290px; top: 50px; left: 350px;">
+            <p>RPGUI list:</p>
+            <hr />
+            <label>Profession / Background:</label>
+            <select class="rpgui-list" id="background-select" size="5">
+                <option value="Blacksmith">Blacksmith</option>
+                <option value="Merchant">Merchant</option>
+                <option value="City Guard">City Guard</option>
+                <option value="Alchemist">Alchemist</option>
+                <option value="Explorer">Explorer</option>
+                <option value="Thug">Thug</option>
+                <option value="Mercenary">Mercenary</option>
+                <option value="Royalty">Royalty</option>
+                <option value="Gladiator">Gladiator</option>
+			</select>
+        </div>
+	</div>
+</body>

@@ -1,0 +1,8 @@
+/*
+Import the font stylesheet.
+If not supported you can add backup via:
+<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+inside your html file.
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");

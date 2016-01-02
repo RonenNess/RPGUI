@@ -1,0 +1,105 @@
+/**
+* customized divs (containers) and framed objects (background and frame image).
+*/
+
+/* game div without background image*/
+.rpgui-container
+{
+	/* position style and default z */
+	position: fixed;
+	z-index: 10;
+}
+
+/* game div with background image*/
+.rpgui-container.framed
+{
+	/* border */
+	border-style: solid;
+	border-width: 25px 25px 25px 25px;
+	-moz-border-image: url("img/border-image.png") 25% repeat repeat;
+	-webkit-border-image: url("img/border-image.png") 25% repeat repeat;
+	-o-border-image: url("img/border-image.png") 25% repeat repeat;
+	border-image: url("img/border-image.png") 25% repeat repeat;
+
+	/* internal border */
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+	/* background */
+	background: url("img/background-image.png") repeat repeat;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	background-position: center;
+}
+
+/* game div with golden background image*/
+.rpgui-container.framed-golden
+{
+	/* border */
+	border-style: solid;
+	border-width: 25px 25px 25px 25px;
+	-moz-border-image: url("img/border-image-golden.png") 25% repeat repeat;
+	-webkit-border-image: url("img/border-image-golden.png") 25% repeat repeat;
+	-o-border-image: url("img/border-image-golden.png") 25% repeat repeat;
+	border-image: url("img/border-image-golden.png") 25% repeat repeat;
+
+	/* internal border */
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+	/* background */
+	background: url("img/background-image-golden.png") repeat repeat;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	background-position: center;
+}
+
+/* game div with golden2 background image*/
+.rpgui-container.framed-golden-2
+{
+	/* border */
+	border-style: solid;
+	border-width: 25px 25px 25px 25px;
+	-moz-border-image: url("img/border-image-golden2.png") 25% repeat repeat;
+	-webkit-border-image: url("img/border-image-golden2.png") 25% repeat repeat;
+	-o-border-image: url("img/border-image-golden2.png") 25% repeat repeat;
+	border-image: url("img/border-image-golden2.png") 25% repeat repeat;
+
+	/* internal border */
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+	/* background */
+	background: url("img/background-image-golden2.png") repeat repeat;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	background-position: center;
+}
+
+/* game div with soft grey background image*/
+.rpgui-container.framed-grey
+{
+	position: relative;
+
+	/* border */
+	border-style: solid;
+	border-width: 25px 25px 25px 25px;
+	-moz-border-image: url("img/border-image-grey.png") 25% repeat repeat;
+	-webkit-border-image: url("img/border-image-grey.png") 25% repeat repeat;
+	-o-border-image: url("img/border-image-grey.png") 25% repeat repeat;
+	border-image: url("img/border-image-grey.png") 25% repeat repeat;
+
+	/* internal border */
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+	/* background */
+	background: url("img/background-image-grey.png") repeat repeat;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	background-position: center;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>RPGUI - Checkbox and Radio</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<!-- include rpgui -->
+	<link href="../dist/rpgui.css" rel="stylesheet" type="text/css" >
+	<script src="../dist/rpgui.js"></script>
+
+    <style>
+        body
+        {
+            background: #aaf;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- all rpgui elements must be inside the rpgui-content -->
+	<div class="rpgui-content">
+
+        <div class="rpgui-container framed rpgui-draggable" style="height:420px; width:290px; top: 50px; left: 50px;">
+            <p>RPGUI checkboxes:</p>
+            <hr />
+            <label>Choose special feats:</label>
+            <input class="rpgui-checkbox" type="checkbox" value="fast-healing" checked><label>Heals 50% faster.</label>
+            <input class="rpgui-checkbox" type="checkbox" value="double-stamina"><label>Double stamina.</label>
+            <input class="rpgui-checkbox" type="checkbox" value="cannot-die"><label>Hero can't die.</label>
+            <input class="rpgui-checkbox" type="checkbox" value="can-fly"><label>Hero can fly.</label>
+            <hr />
+            <input class="rpgui-checkbox golden" type="checkbox" value="cannot-die"><label>Golden checkbox1</label>
+            <input class="rpgui-checkbox golden" type="checkbox" value="can-fly"><label>Golden checkbox2</label>
+        </div>
+
+        <div class="rpgui-container framed rpgui-draggable" style="height:380px; width:290px; top: 50px; left: 450px;">
+            <p>RPGUI radio buttons:</p>
+            <hr />
+            <form action="">
+                <label>Choose hero's gender:</label>
+                <br />
+				<input class="rpgui-radio" checked type="radio" name="sex" value="male"><label>Male</label>
+                <br />
+				<input class="rpgui-radio" type="radio" name="sex" value="female"><label>Female</label>
+			</form>
+            <hr />
+            <form action="">
+                <label>Golden radio buttons:</label>
+                <br />
+				<input class="rpgui-radio golden" checked type="radio" name="golden" value="1"><label>Golden radio 1</label>
+                <br />
+				<input class="rpgui-radio golden" type="radio" name="golden" value="2"><label>Golden radio 2</label>
+			</form>
+        </div>
+	</div>
+</body>

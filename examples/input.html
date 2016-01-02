@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>RPGUI - Input</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<!-- include rpgui -->
+	<link href="../dist/rpgui.css" rel="stylesheet" type="text/css" >
+	<script src="../dist/rpgui.js"></script>
+
+    <style>
+        body
+        {
+            background: #aaf;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- all rpgui elements must be inside the rpgui-content -->
+	<div class="rpgui-content">
+
+        <div class="rpgui-container framed rpgui-draggable" style="height:500px; width:280px; top: 50px; left: 50px;">
+            <h1>Textual Inputs</h1>
+            <hr />
+
+            <label>Your hero name:</label>
+            <input type="text" name="FirstName" value="Bob" placeholder="Hero name">
+            <br/><br/>
+
+            <label>Your hero last name:</label>
+            <input type="text" name="FirstName" value="The Destroyer" placeholder="Hero last name">
+            <br /><br />
+
+            <label>Your hero bio:</label>
+            <textarea rows="4" cols="50">Bob The Destroyer likes to destroy stuff.</textarea>
+        </div>
+	</div>
+</body>
