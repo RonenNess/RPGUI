@@ -228,6 +228,8 @@ There's another variation of the slider with a more fancy style. To use it add t
 
 ### rpgui-progress
 
+![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/bars.jpg)
+
 A rpgui-progress is like a progress bar that can fills up. Or more useful for games, an health/mana bar.
 To create a progress bar just create a div with the class "rpgui-progress":
 
@@ -263,6 +265,8 @@ For example:
 
 ### rpgui-icon
 
+![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/icons.jpg)
+
 This class will create a simple square icon. There are 15 built-in icons in RPGUI, but its really easy to create new ones (check out icon.css file for more info).
 Here's how to use the icons:
 
@@ -286,6 +290,8 @@ Here's how to use the icons:
 
 ### rpgui-dropdown
 
+![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/dropdown.jpg)
+
 This class is used for <select> with <option> tags, and it creates a dropdown select widget with the RPGUI design.
 To use it create a <select> tag with <option>s inside, and add the "rpgui-dropdown" class to the <select> parent tag.
 
@@ -304,6 +310,8 @@ To use the dropdown just use the <select> tag as you would normally do, but reme
 
 ### rpgui-list
 
+![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/list.jpg)
+
 This class is used for <select> with <option> tags, and it creates a list select widget with the RPGUI design.
 To use it create a <select> tag with <option>s inside, and add the "rpgui-list" class to the <select> parent tag.
 
@@ -321,6 +329,8 @@ Note that once the page is fully loaded and the rpgui list is created, you can n
 To use the dropdown just use the <select> tag as you would normally do, but remember you can also use the RPGUI.set_value() and RPGUI.get_value() if you are uncertain.
 
 ### rpgui-button
+
+![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/buttons.jpg)
 
 rpgui-button is a styled Button with text on it. To use it, create a button with paragraph inside and give the button the "rpgui-button" class. For example:
 
@@ -350,6 +360,8 @@ In addition, there's a fancier version of an <hr> you can use with the "golden" 
 
 ### rpgui-checkbox
 
+![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/checkbox.jpg)
+
 rpgui-checkbox are Checkboxes with a nice RPGUI design. To use them create a checkbox input tag with a label after it (it won't work without the label!) and give it the "rpgui-checkbox" class.
 For example:
 
@@ -370,6 +382,8 @@ There's a golden variation to the checkbox you can use for fancier graphics:
 ```
 
 ### rpgui-radio
+
+![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/for_readme/radio.jpg)
 
 rpgui-radio are radio buttons with a nice RPGUI design. To use them create a radio input tag with a label after it (it won't work without the label!) and give it the "rpgui-radio" class.
 For example:
