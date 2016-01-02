@@ -6,6 +6,7 @@ CSS &amp; JavaScript lib to easily create old-school RPG style GUI for web games
 - [What is it?](#what-is-it)
 - [Key Features](#key-features)
 - [How to use](#how-to-use)
+- [How to tweak](#how-to-tweak)
 - [License](#license)
 - [Contact Me](#contact-me)
 
@@ -405,6 +406,15 @@ There's a golden variation to the radio you can use for fancier graphics:
 ```html
 <input class="rpgui-radio golden" type="radio" value="some val"><label>This is a golden radio button!</label>
 ```
+
+## How to Tweak
+
+To change RPGUI into your own theme the easiest thing to do is to replace the images in dist/img/ folder.
+The name of the files should be pretty easy to understand and change.
+
+To change the css rules / JavaScript itself you will need to edit the source files. RPGUI wasn't originally planned to be a distributed lib (it was taken out of a hobby project) and as such its not written in the most flexible / generic way.
+
+Feel free to create alternatives of RPGUI and publish them as different themes.
 
 ## Changelog
 
