@@ -48,6 +48,7 @@ ul.rpgui-list-imp
     color: white;
 	font-size: 12px;
 	height: 16px;
+	margin-left: 5px !important;
 
 	/* remove the dot */
 	list-style-type: none;

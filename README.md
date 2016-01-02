@@ -119,6 +119,8 @@ Everything RPGUI-related must be inside a div with this class. For example:
 </div>
 ```
 
+**Even if not specified, all the html snippets in this tutorial from this point are assumed to be inside rpgui-content.**
+
 Note that this class already change some element styling and change the cursor, so if you want parts of your page to be without RPGUI style don't put them in the content div.
 
 ### rpgui-container
@@ -198,7 +200,7 @@ Similar to paragraphs, these elements are styled automatically when inside the r
 
 ### rpgui-slider
 
-An rpgui-slider is like an HTML range input but with RPGUI style. 
+A rpgui-slider is like an HTML range input but with RPGUI style. 
 To create an rpgui-slider just create an input element with type="range" and class="rpgui-slider":
 
 ```html
@@ -216,7 +218,84 @@ There's another variation of the slider with a more fancy style. To use it add t
 <input class="rpgui-slider golden" type="range" min="0" max="10" value="8">
 ```
 
-It behaves just like rpgui-slider but with different graphics.
+### rpgui-progress
+
+A rpgui-progress is like a progress bar that can fills up. Or more useful for games, an health/mana bar.
+To create a progress bar just create a div with the class "rpgui-progress":
+
+```html
+<div class="rpgui-progress"></div>
+```
+
+By default it will have purple color, but you have 3 other colors to use - red, green and blue:
+
+```html
+<label>Red bar:</label>
+<div class="rpgui-progress red"></div>
+
+<label>Blue bar:</label>
+<div class="rpgui-progress blue"></div>
+
+<label>Green bar:</label>
+<div class="rpgui-progress green"></div>
+```
+
+When the progress bar is created, it starts as full. To set its value you should use the RPGUI.set_value() function and give values that range from 0.0 to 1.0.
+For example:
+
+```html
+<div id="red-bar" class="rpgui-progress red"></div>
+
+<script>
+	// set the red bar into 50% full
+	var progress = document.getElementById("red-bar");
+	RPGUI.set_value(progress, 0.5);
+</script>
+```
+
+### rpgui-icon
+
+This class will create a simple square icon. There are 15 built-in icons in RPGUI, but its really easy to create new ones (check out icon.css file for more info).
+Here's how to use the icons:
+
+```html
+	<div class="rpgui-icon sword"></div>
+	<div class="rpgui-icon shield"></div>
+	<div class="rpgui-icon exclamation"></div>
+	<div class="rpgui-icon potion-red"></div>
+	<div class="rpgui-icon potion-green"></div>
+	<div class="rpgui-icon potion-blue"></div>
+	<div class="rpgui-icon weapon-slot"></div>
+	<div class="rpgui-icon shield-slot"></div>
+	<div class="rpgui-icon armor-slot"></div>
+	<div class="rpgui-icon helmet-slot"></div>
+	<div class="rpgui-icon ring-slot"></div>
+	<div class="rpgui-icon potion-slot"></div>
+	<div class="rpgui-icon magic-slot"></div>
+	<div class="rpgui-icon shoes-slot"></div>
+	<div class="rpgui-icon empty-slot"></div>
+```
+
+### rpgui-dropdown
+
+This class is used for <select> with <option> tags, and it creates a dropdown select widget with the RPGUI design.
+To use it create a <select> tag with <option>s inside, and add the "rpgui-dropdown" class to the <select> parent tag.
+
+For example:
+
+```html
+<select class="rpgui-dropdown">
+	<option value="option1">option1</option>
+	<option value="option2">option2</option>
+	...
+</select>
+```
+
+Note that once the page is fully loaded and the rpgui dropdown is created, you can no longer add new options to it.
+
+To use the dropdown just use the <select> tag as you would normally do, but remember you can also use the RPGUI.set_value() and RPGUI.get_value() if you are uncertain.
+
+### rpgui-list
 
 
 
