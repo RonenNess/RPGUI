@@ -292,12 +292,95 @@ For example:
 ```
 
 Note that once the page is fully loaded and the rpgui dropdown is created, you can no longer add new options to it.
-
 To use the dropdown just use the <select> tag as you would normally do, but remember you can also use the RPGUI.set_value() and RPGUI.get_value() if you are uncertain.
 
 ### rpgui-list
 
+This class is used for <select> with <option> tags, and it creates a list select widget with the RPGUI design.
+To use it create a <select> tag with <option>s inside, and add the "rpgui-list" class to the <select> parent tag.
 
+For example:
+
+```html
+<select class="rpgui-list" size="5">
+	<option value="option1">option1</option>
+	<option value="option2">option2</option>
+	...
+</select>
+```
+
+Note that once the page is fully loaded and the rpgui list is created, you can no longer add new options to it.
+To use the dropdown just use the <select> tag as you would normally do, but remember you can also use the RPGUI.set_value() and RPGUI.get_value() if you are uncertain.
+
+### rpgui-button
+
+rpgui-button is a styled Button with text on it. To use it, create a button with paragraph inside and give the button the "rpgui-button" class. For example:
+
+```html
+<button class="rpgui-button" type="button"><p>Click me!</p></button>
+```
+
+##### golden button
+
+There's an alternative fancier button style you can use with the golden class:
+
+```html
+<button class="rpgui-button golden" type="button"><p>Click me golden!</p></button>
+```
+
+This behaves like a regular rpgui-button but with a different graphics.
+
+### hr
+
+RPGUI gives automatic style to any <hr> tag inside the rpgui-content. You can use <hr> tags as a nice method to separate parts of a container.
+
+In addition, there's a fancier version of an <hr> you can use with the "golden" class:
+
+```html
+<hr class="golden">
+```
+
+### rpgui-checkbox
+
+rpgui-checkbox are Checkboxes with a nice RPGUI design. To use them create a checkbox input tag with a label after it (it won't work without the label!) and give it the "rpgui-checkbox" class.
+For example:
+
+```html
+<input class="rpgui-checkbox" type="checkbox"><label>This is checkbox.</label>
+```
+
+That the RPGUI implement the checkbox by hiding the original checkbox input and link the <label> style to its state. Using JavaScript events, clicking the label will change the checkbox state.
+
+You can use the checkbox just as you would with a regular checkbox element (don't worry about the label thing), or use RPGUI.set_value() and RPGUI.get_value() if you are unsure.
+
+#### rpgui-checkbox golden
+
+There's a golden variation to the checkbox you can use for fancier graphics:
+
+```html
+<input class="rpgui-checkbox golden" type="checkbox"><label>This is golden checkbox.</label>
+```
+
+### rpgui-radio
+
+rpgui-radio are radio buttons with a nice RPGUI design. To use them create a radio input tag with a label after it (it won't work without the label!) and give it the "rpgui-radio" class.
+For example:
+
+```html
+<input class="rpgui-radio" type="radio" value="some val"><label>This is radio button!</label>
+```
+
+That the RPGUI implement the radio by hiding the original radio input and link the <label> style to its state. Using JavaScript events, clicking the label will change the radio state.
+
+You can use the radio just as you would with a regular radio element (don't worry about the label thing), or use RPGUI.set_value() and RPGUI.get_value() if you are unsure.
+
+#### rpgui-radio golden
+
+There's a golden variation to the radio you can use for fancier graphics:
+
+```html
+<input class="rpgui-radio golden" type="radio" value="some val"><label>This is a golden radio button!</label>
+```
 
 ## Changelog
 
