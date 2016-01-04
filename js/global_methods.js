@@ -2,8 +2,6 @@
 * Used to provide unified, easy javascript access to customized elements.
 */
 
-// rpgui global namespace
-var RPGUI = RPGUI || {};
 
 // different callbacks for different methods and types
 RPGUI.__update_funcs = {};
