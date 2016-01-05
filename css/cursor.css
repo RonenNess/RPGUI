@@ -6,7 +6,8 @@
 
 /* default cursor important */
 /* this rule is for when you specifically request this cursor class */
-.rpgui-cursor-default
+.rpgui-cursor-default,
+.rpgui-cursor-default *
 {
     cursor: url("img/cursor/default.png"), auto !important;
 }
@@ -23,10 +24,12 @@ label
 
 /* pointer / hand cursor important */
 /* this rule is for when you specifically request this cursor class */
-.rpgui-cursor-point
+.rpgui-cursor-point,
+.rpgui-cursor-point *
 {
     cursor: url("img/cursor/point.png") 10 0, auto !important;
 }
+
 /* pointer / hand cursor, not important, for all elements that have pointer by-default */
 .rpgui-content a,
 .rpgui-content button,
@@ -45,7 +48,8 @@ label
 
 /* for input / text selection important */
 /* this rule is for when you specifically request this cursor class */
-.rpgui-cursor-select
+.rpgui-cursor-select,
+.rpgui-cursor-select *
 {
     cursor: url("img/cursor/select.png") 10 0, auto !important;
 }
