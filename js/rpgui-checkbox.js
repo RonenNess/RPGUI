@@ -53,9 +53,6 @@ function create_checkbox(elem)
 		throw "After an '" + _checkbox_class + "' there must be a label!";
 	}
 
-	// set pointer cursor
-	RPGUI.set_cursor(new_checkbox, "point");
-
 	// copy all event listeners and events
 	RPGUI.copy_event_listeners(elem, new_checkbox);
 

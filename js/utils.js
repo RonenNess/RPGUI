@@ -5,14 +5,10 @@
 
 // create and return html element for rpgui internal mechanisms
 // element is string, element type (like "div" or "p")
-// cursor is optional cursor to set
-RPGUI.create_element = function(element, cursor)
+RPGUI.create_element = function(element)
 {
     // create element
     element = document.createElement(element);
-
-    // set cursor
-    if (cursor) {RPGUI.set_cursor(element, cursor);}
 
     // return element
     return element;

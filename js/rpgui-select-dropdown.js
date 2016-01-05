@@ -35,12 +35,12 @@ function create_dropdown(elem)
 	var arrow_down_prefix = "<label>&#9660;</label> ";
 
 	// create the paragraph that will display the select_header option
-	var select_header = RPGUI.create_element("p", "point");
+	var select_header = RPGUI.create_element("p");
 	RPGUI.add_class(select_header, "rpgui-dropdown-imp rpgui-dropdown-imp-header");
 	RPGUI.insert_after(select_header, elem);
 
 	// create the list to hold all the options
-	var list = RPGUI.create_element("ul", "point");
+	var list = RPGUI.create_element("ul");
 	RPGUI.add_class(list, "rpgui-dropdown-imp");
 	RPGUI.insert_after(list, select_header);
 
@@ -63,7 +63,7 @@ function create_dropdown(elem)
 		if (option.tagName != "OPTION") continue;
 
 		// add the new option as list item
-		var item = RPGUI.create_element("li", "point");
+		var item = RPGUI.create_element("li");
 		item.innerHTML = option.innerHTML;
 		list.appendChild(item);
 

@@ -139,45 +139,6 @@ RPGUI.get_value = function(element)
     }
 }
 
-// rpgui-button.js
-
-/**
-* This script generate the rpgui button class.
-* This will replace automatically every <button> element that has the "rpgui-button" class.
-*/
-
-
-// class name we will convert to special button
-var _button_class = "rpgui-button";
-
-// create a rpgui-button from a given element.
-RPGUI.__create_funcs["button"] = function(element)
-{
-	RPGUI.add_class(element, _button_class);
-	create_button(element);
-};
-
-// init all button elements on page load
-RPGUI.on_load(function()
-{
-	// get all the select elements we need to upgrade
-	var elems = document.getElementsByClassName(_button_class);
-
-	// iterate the selects and upgrade them
-	for (var i = 0; i < elems.length; ++i)
-	{
-		RPGUI.create(elems[i], "button");
-	}
-});
-
-// upgrade a single "input" element to the beautiful button class
-function create_button(elem)
-{
-	// set cursor
-	RPGUI.set_cursor(elem, "point");
-}
-
-
 // rpgui-checkbox.js
 
 /**
@@ -234,9 +195,6 @@ function create_checkbox(elem)
 	{
 		throw "After an '" + _checkbox_class + "' there must be a label!";
 	}
-
-	// set pointer cursor
-	RPGUI.set_cursor(new_checkbox, "point");
 
 	// copy all event listeners and events
 	RPGUI.copy_event_listeners(elem, new_checkbox);
@@ -517,9 +475,6 @@ function create_radio(elem)
 		throw "After an '" + _radio_class + "' there must be a label!";
 	}
 
-	// set pointer cursor
-	RPGUI.set_cursor(new_radio, "point");
-
 	// copy all event listeners and events
 	RPGUI.copy_event_listeners(elem, new_radio);
 
@@ -574,12 +529,12 @@ function create_dropdown(elem)
 	var arrow_down_prefix = "<label>&#9660;</label> ";
 
 	// create the paragraph that will display the select_header option
-	var select_header = RPGUI.create_element("p", "point");
+	var select_header = RPGUI.create_element("p");
 	RPGUI.add_class(select_header, "rpgui-dropdown-imp rpgui-dropdown-imp-header");
 	RPGUI.insert_after(select_header, elem);
 
 	// create the list to hold all the options
-	var list = RPGUI.create_element("ul", "point");
+	var list = RPGUI.create_element("ul");
 	RPGUI.add_class(list, "rpgui-dropdown-imp");
 	RPGUI.insert_after(list, select_header);
 
@@ -602,7 +557,7 @@ function create_dropdown(elem)
 		if (option.tagName != "OPTION") continue;
 
 		// add the new option as list item
-		var item = RPGUI.create_element("li", "point");
+		var item = RPGUI.create_element("li");
 		item.innerHTML = option.innerHTML;
 		list.appendChild(item);
 
@@ -701,7 +656,7 @@ function create_list(elem)
 	if (!elem.size) elem.size = 3;
 
 	// create the list to hold all the options
-	var list = RPGUI.create_element("ul", "point");
+	var list = RPGUI.create_element("ul");
 	RPGUI.add_class(list, "rpgui-list-imp");
 	elem.parentNode.insertBefore(list, elem.nextSibling);
 
@@ -717,7 +672,7 @@ function create_list(elem)
 		if (option.tagName != "OPTION") continue;
 
 		// add the new option as list item
-		var item = RPGUI.create_element("li", "point");
+		var item = RPGUI.create_element("li");
 		item.innerHTML = option.innerHTML;
 		list.appendChild(item);
 
@@ -826,7 +781,7 @@ function create_slider(elem)
 	var golden = RPGUI.has_class(elem, "golden") ? " golden" : "";
 
 	// create the containing div for the new slider
-	var slider_container = RPGUI.create_element("div", "point");
+	var slider_container = RPGUI.create_element("div");
 	RPGUI.add_class(slider_container, "rpgui-slider-container" + golden);
 
 	// insert the slider container
@@ -838,22 +793,22 @@ function create_slider(elem)
 	// create slider parts (edges, track, thumb)
 
 	// track
-	var track = RPGUI.create_element("div", "point");
+	var track = RPGUI.create_element("div");
 	RPGUI.add_class(track, "rpgui-slider-track" + golden);
 	slider_container.appendChild(track);
 
 	// left edge
-	var left_edge = RPGUI.create_element("div", "point");
+	var left_edge = RPGUI.create_element("div");
 	RPGUI.add_class(left_edge, "rpgui-slider-left-edge" + golden);
 	slider_container.appendChild(left_edge);
 
 	// right edge
-	var right_edge = RPGUI.create_element("div", "point");
+	var right_edge = RPGUI.create_element("div");
 	RPGUI.add_class(right_edge, "rpgui-slider-right-edge" + golden);
 	slider_container.appendChild(right_edge);
 
 	// thumb (slider value show)
-	var thumb = RPGUI.create_element("div", "point");
+	var thumb = RPGUI.create_element("div");
 	RPGUI.add_class(thumb, "rpgui-slider-thumb" + golden);
 	slider_container.appendChild(thumb);
 
@@ -968,14 +923,10 @@ function create_slider(elem)
 
 // create and return html element for rpgui internal mechanisms
 // element is string, element type (like "div" or "p")
-// cursor is optional cursor to set
-RPGUI.create_element = function(element, cursor)
+RPGUI.create_element = function(element)
 {
     // create element
     element = document.createElement(element);
-
-    // set cursor
-    if (cursor) {RPGUI.set_cursor(element, cursor);}
 
     // return element
     return element;

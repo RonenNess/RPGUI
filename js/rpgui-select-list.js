@@ -35,7 +35,7 @@ function create_list(elem)
 	if (!elem.size) elem.size = 3;
 
 	// create the list to hold all the options
-	var list = RPGUI.create_element("ul", "point");
+	var list = RPGUI.create_element("ul");
 	RPGUI.add_class(list, "rpgui-list-imp");
 	elem.parentNode.insertBefore(list, elem.nextSibling);
 
@@ -51,7 +51,7 @@ function create_list(elem)
 		if (option.tagName != "OPTION") continue;
 
 		// add the new option as list item
-		var item = RPGUI.create_element("li", "point");
+		var item = RPGUI.create_element("li");
 		item.innerHTML = option.innerHTML;
 		list.appendChild(item);
 

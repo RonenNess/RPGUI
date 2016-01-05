@@ -35,7 +35,7 @@ function create_slider(elem)
 	var golden = RPGUI.has_class(elem, "golden") ? " golden" : "";
 
 	// create the containing div for the new slider
-	var slider_container = RPGUI.create_element("div", "point");
+	var slider_container = RPGUI.create_element("div");
 	RPGUI.add_class(slider_container, "rpgui-slider-container" + golden);
 
 	// insert the slider container
@@ -47,22 +47,22 @@ function create_slider(elem)
 	// create slider parts (edges, track, thumb)
 
 	// track
-	var track = RPGUI.create_element("div", "point");
+	var track = RPGUI.create_element("div");
 	RPGUI.add_class(track, "rpgui-slider-track" + golden);
 	slider_container.appendChild(track);
 
 	// left edge
-	var left_edge = RPGUI.create_element("div", "point");
+	var left_edge = RPGUI.create_element("div");
 	RPGUI.add_class(left_edge, "rpgui-slider-left-edge" + golden);
 	slider_container.appendChild(left_edge);
 
 	// right edge
-	var right_edge = RPGUI.create_element("div", "point");
+	var right_edge = RPGUI.create_element("div");
 	RPGUI.add_class(right_edge, "rpgui-slider-right-edge" + golden);
 	slider_container.appendChild(right_edge);
 
 	// thumb (slider value show)
-	var thumb = RPGUI.create_element("div", "point");
+	var thumb = RPGUI.create_element("div");
 	RPGUI.add_class(thumb, "rpgui-slider-thumb" + golden);
 	slider_container.appendChild(thumb);
 
