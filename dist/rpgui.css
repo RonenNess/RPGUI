@@ -369,8 +369,7 @@ inside your html file.
 
 /* default cursor important */
 /* this rule is for when you specifically request this cursor class */
-.rpgui-cursor-default,
-.rpgui-cursor-default *
+.rpgui-cursor-default
 {
     cursor: url("img/cursor/default.png"), auto !important;
 }
