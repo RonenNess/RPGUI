@@ -88,9 +88,6 @@ function create_dropdown(elem)
 		})(elem, option, item, select_header, list);
 	}
 
-	// set the select_header text
-	select_header.innerHTML = arrow_down_prefix + elem.options[elem.selectedIndex].text;
-
 	// now set list and header callbacks
 	// create a namespace to preserve variables
 	(function(elem, list, select_header)
@@ -116,8 +113,18 @@ function create_dropdown(elem)
 		elem.addEventListener('change', function()
 		{
 			// set the header html and hide the list
-			select_header.innerHTML = arrow_down_prefix + elem.options[elem.selectedIndex].text;
+			if (elem.selectedIndex != -1)
+			{
+				select_header.innerHTML = arrow_down_prefix + elem.options[elem.selectedIndex].text;
+			}
+			else
+			{
+				select_header.innerHTML = arrow_down_prefix;
+			}
 			list.style.display = "none";
 		});
 	})(elem, select_header, list);
+	
+	// call the on-change to set starting value
+	RPGUI.update(elem);
 }

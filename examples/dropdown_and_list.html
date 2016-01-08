@@ -23,7 +23,7 @@
     <!-- all rpgui elements must be inside the rpgui-content -->
 	<div class="rpgui-content">
 
-        <div class="rpgui-container framed rpgui-draggable" style="height:320px; width:290px; top: 50px; left: 50px;">
+        <div class="rpgui-container framed rpgui-draggable" style="height:350px; width:290px; top: 50px; left: 50px;">
             <p>RPGUI dropdown</p>
             <hr />
             <label>Select your class:</label>
@@ -41,13 +41,23 @@
                 <option value="Elf">Elf</option>
                 <option value="Dwarf">Dwarf</option>
             </select>
+			<br />
+			<label>Select deity (optional):</label>
+            <select class="rpgui-dropdown">
+			<option selected disabled hidden value=''></option>
+                <option value="Boccob">Boccob</option>
+                <option value="Moradin">Moradin</option>
+                <option value="Nerull">Nerull</option>
+                <option value="Pelor">Pelor</option>
+				<option value="Yondalla">Yondalla</option>
+            </select>
         </div>
 
-        <div class="rpgui-container framed rpgui-draggable" style="height:320px; width:290px; top: 50px; left: 350px;">
+        <div class="rpgui-container framed rpgui-draggable" style="height:350px; width:290px; top: 50px; left: 350px;">
             <p>RPGUI list:</p>
             <hr />
             <label>Profession / Background:</label>
-            <select class="rpgui-list" id="background-select" size="5">
+            <select class="rpgui-list" id="background-select" size="6">
                 <option value="Blacksmith">Blacksmith</option>
                 <option value="Merchant">Merchant</option>
                 <option value="City Guard">City Guard</option>
