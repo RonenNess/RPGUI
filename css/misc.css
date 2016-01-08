@@ -21,3 +21,19 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+/* rotate object 90 degrees */
+.rpgui-rotate-90
+{
+    /* rotate 90 degrees */
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+    /* rotate from center-left side */
+    -ms-transform-origin: 0% 50%; /* IE 9 */
+    -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+    transform-origin: 0% 50%;
+}
