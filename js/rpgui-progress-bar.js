@@ -1,7 +1,7 @@
 /**
-* This script generate the rpgui progress-bar class.
-* This will replace automatically every <div> element that has the "rpgui-progress" class.
-*/
+ * This script generate the rpgui progress-bar class.
+ * This will replace automatically every <div> element that has the "rpgui-progress" class.
+ */
 
 
 // class name we will convert to special progress
@@ -27,16 +27,9 @@ RPGUI.__set_funcs["progress"] = function(elem, value)
 	var edge_left = RPGUI.get_child_with_class(elem, "rpgui-progress-left-edge");
 	var edge_right = RPGUI.get_child_with_class(elem, "rpgui-progress-right-edge");
 
-	// calc the edges size
-	var edges_width = edge_left.offsetWidth + edge_right.offsetWidth;
-
-	// set track width
-	track.style.left = edge_left.offsetWidth + "px";
-	track.style.width = (elem.offsetWidth - edges_width) + "px";
-
 	// set progress width
 	progress.style.left = "0px";
-	progress.style.width = ((track.offsetWidth) * value) + "px";
+	progress.style.width = (value * 100) + "%";
 };
 
 // init all progress elements on page load
@@ -60,9 +53,6 @@ function create_progress(elem)
 
 	// insert the progress container
 	RPGUI.insert_after(progress_container, elem);
-
-	// set container width based on element original width
-	progress_container.style.width = elem.offsetWidth + "px";
 
 	// create progress parts (edges, track, thumb)
 

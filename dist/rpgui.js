@@ -1,9 +1,9 @@
-RPGUI = (function() {
-
-
-
-// init.js
-
+RPGUI = (function() {
+
+
+
+// init.js
+
 /**
 * init rpgui.
 * this is the first file included in the compiled js.
@@ -50,10 +50,10 @@ RPGUI.on_load = function(callback)
 	
 	// add to init list
 	RPGUI.__init_list.push(callback);
-}
-
-// global_methods.js
-
+}
+
+// global_methods.js
+
 /**
 * Used to provide unified, easy javascript access to customized elements.
 */
@@ -137,192 +137,14 @@ RPGUI.get_value = function(element)
     {
         return element.value;
     }
-}
-
-// rpgui-checkbox.js
-
-/**
-* This script generate the rpgui checkbox class.
-* This will replace automatically every <input> element that has the "rpgui-checkbox" class.
-*/
-
-
-// class name we will convert to special checkbox
-var _checkbox_class = "rpgui-checkbox";
-
-// create a rpgui-checkbox from a given element.
-// note: element must be <input> of type "checkbox" for this to work properly.
-RPGUI.__create_funcs["checkbox"] = function(element)
-{
-	RPGUI.add_class(element, _checkbox_class);
-	create_checkbox(element);
-};
-
-// set function to set value of the checkbox
-RPGUI.__set_funcs["checkbox"] = function(elem, value)
-{
-	elem.checked = value;
-};
-
-// set function to get value of the checkbox
-RPGUI.__get_funcs["checkbox"] = function(elem)
-{
-	return elem.checked;
-};
-
-// init all checkbox elements on page load
-RPGUI.on_load(function()
-{
-	// get all the input elements we need to upgrade
-	var elems = document.getElementsByClassName(_checkbox_class);
-
-	// iterate the selects and upgrade them
-	for (var i = 0; i < elems.length; ++i)
-	{
-		RPGUI.create(elems[i], "checkbox");
-	}
-});
-
-// upgrade a single "input" element to the beautiful checkbox class
-function create_checkbox(elem)
-{
-	// get next sibling, assuming its the checkbox label.
-	// this object will be turned into the new checkbox.
-	var new_checkbox = elem.nextSibling;
-
-	// validate
-	if (!new_checkbox || new_checkbox.tagName !== "LABEL")
-	{
-		throw "After an '" + _checkbox_class + "' there must be a label!";
-	}
-
-	// copy all event listeners and events
-	RPGUI.copy_event_listeners(elem, new_checkbox);
-
-	// do the click event for the new checkbox
-	(function(elem, new_checkbox)
-	{
-		new_checkbox.addEventListener("click", function()
-		{
-			RPGUI.set_value(elem, !elem.checked);
-
-		});
-	})(elem, new_checkbox);
-}
-
-
-// rpgui-content.js
-
-/**
-* Init rpgui content and what's inside.
-*/
-
-// init all the rpgui containers and their children
-RPGUI.on_load(function()
-{
-	// get all containers and iterate them
-	var contents = document.getElementsByClassName("rpgui-content");
-	for (var i = 0; i < contents.length; ++i)
-	{
-		// get current container and init it
-		var content = contents[i];
-
-		// prevent dragging
-		RPGUI.prevent_drag(content);
-
-		// set default cursor
-		RPGUI.set_cursor(content, "default");
-	}
-});
-
-
-// rpgui-draggable.js
-
-/**
-* This script add the dragging functionality to all elements with "rpgui-draggable" class.
-*/
-
-
-// element currently dragged
-var _curr_dragged = null;
-var _curr_dragged_point = null;
-var _dragged_z = 1000;
-
-// class name we consider as draggable
-var _draggable_class = "rpgui-draggable";
-
-// set element as draggable
-// note: this also add the "rpgui-draggable" css class to the element.
-RPGUI.__create_funcs["draggable"] = function(element)
-{
-	// prevent forms of default dragging on this element
-	element.draggable = false;
-	element.ondragstart = function() {return false;}
-
-	// add the mouse down event listener
-	RPGUI.add_class(element, _draggable_class);
-	element.addEventListener('mousedown', mouseDown);
-};
-
-// init all draggable elements (objects with "rpgui-draggable" class)
-RPGUI.on_load(function()
-{
-	// init all draggable elements
-	var elems = document.getElementsByClassName(_draggable_class);
-	for (var i = 0; i < elems.length; ++i)
-	{
-		RPGUI.create(elems[i], "draggable");
-	}
-
-	// add mouseup event on window to stop dragging
-	window.addEventListener('mouseup', mouseUp);
-});
-
-// stop drag
-function mouseUp(e)
-{
-	_curr_dragged = null;
-	window.removeEventListener('mousemove', divMove);
 }
 
-// start drag
-function mouseDown(e){
+// rpgui-progress-bar.js
 
-	// set dragged object and make sure its really draggable
-	var target = e.target || e.srcElement;
-	if (!RPGUI.has_class(target, _draggable_class)) {return;}
-		
-	_curr_dragged = target;
-	
-	// set holding point
-	var rect = _curr_dragged.getBoundingClientRect();
-	_curr_dragged_point = {x: rect.left-e.clientX, y: rect.top-e.clientY};
-
-	// add z-index to top this element
-	target.style.zIndex = _dragged_z++;
-	
-	// begin dragging
-	window.addEventListener('mousemove', divMove, true);
-
-}
-
-// dragging
-function divMove(e){
-	if (_curr_dragged)
-	{
-		_curr_dragged.style.position = 'absolute';
-		_curr_dragged.style.left = (e.clientX + _curr_dragged_point.x) + 'px';
-		_curr_dragged.style.top = (e.clientY + _curr_dragged_point.y) + 'px';
-	}
-}
-
-
-// rpgui-progress-bar.js
-
 /**
-* This script generate the rpgui progress-bar class.
-* This will replace automatically every <div> element that has the "rpgui-progress" class.
-*/
+ * This script generate the rpgui progress-bar class.
+ * This will replace automatically every <div> element that has the "rpgui-progress" class.
+ */
 
 
 // class name we will convert to special progress
@@ -348,16 +170,9 @@ RPGUI.__set_funcs["progress"] = function(elem, value)
 	var edge_left = RPGUI.get_child_with_class(elem, "rpgui-progress-left-edge");
 	var edge_right = RPGUI.get_child_with_class(elem, "rpgui-progress-right-edge");
 
-	// calc the edges size
-	var edges_width = edge_left.offsetWidth + edge_right.offsetWidth;
-
-	// set track width
-	track.style.left = edge_left.offsetWidth + "px";
-	track.style.width = (elem.offsetWidth - edges_width) + "px";
-
 	// set progress width
 	progress.style.left = "0px";
-	progress.style.width = ((track.offsetWidth) * value) + "px";
+	progress.style.width = (value * 100) + "%";
 };
 
 // init all progress elements on page load
@@ -381,9 +196,6 @@ function create_progress(elem)
 
 	// insert the progress container
 	RPGUI.insert_after(progress_container, elem);
-
-	// set container width based on element original width
-	progress_container.style.width = elem.offsetWidth + "px";
 
 	// create progress parts (edges, track, thumb)
 
@@ -416,82 +228,253 @@ function create_progress(elem)
 	var starting_val = elem.dataset.value !== undefined ? parseFloat(elem.dataset.value) : 1;
 	RPGUI.set_value(elem, starting_val);
 }
-
-
-// rpgui-radio.js
-
+
+
+// rpgui-select-list.js
+
 /**
-* This script generate the rpgui radio class.
-* This will replace automatically every <input> element that has the "rpgui-radio" class.
+* This script generate the rpgui list <select>.
+* This will replace automatically every <select> element that has the "rpgui-list" class.
 */
 
 
-// class name we will convert to special radio
-var _radio_class = "rpgui-radio";
+// class name we will convert to list
+var _list_class = "rpgui-list";
 
-// create a rpgui-radio from a given element.
-// note: element must be <input> of type "radio" for this to work properly.
-RPGUI.__create_funcs["radio"] = function(element)
+// create a rpgui-list from a given element.
+// note: element must be <select> with <option> tags that will turn into the items
+RPGUI.__create_funcs["list"] = function(element)
 {
-	RPGUI.add_class(element, _radio_class);
-	create_radio(element);
+	RPGUI.add_class(element, _list_class);
+	create_list(element);
 };
 
-// set function to set value of the radio
-RPGUI.__set_funcs["radio"] = function(elem, value)
-{
-	elem.checked = value;
-};
-
-// set function to get value of the radio button
-RPGUI.__get_funcs["radio"] = function(elem)
-{
-	return elem.checked;
-};
-
-// init all radio elements on page load
+// init all list elements on page load
 RPGUI.on_load(function()
 {
-	// get all the input elements we need to upgrade
-	var elems = document.getElementsByClassName(_radio_class);
+	// get all the select elements we need to upgrade
+	var elems = document.getElementsByClassName(_list_class);
 
 	// iterate the selects and upgrade them
 	for (var i = 0; i < elems.length; ++i)
 	{
-		RPGUI.create(elems[i], "radio");
+		RPGUI.create(elems[i], "list");
 	}
 });
 
-// upgrade a single "input" element to the beautiful radio class
-function create_radio(elem)
+// upgrade a single "select" element to the beautiful list
+function create_list(elem)
 {
-	// get next sibling, assuming its the radio label.
-	// this object will be turned into the new radio.
-	var new_radio = elem.nextSibling;
+	// default list size is 3
+	if (!elem.size) elem.size = 3;
 
-	// validate
-	if (!new_radio || new_radio.tagName !== "LABEL")
+	// create the list to hold all the options
+	var list = RPGUI.create_element("ul");
+	RPGUI.add_class(list, "rpgui-list-imp");
+	elem.parentNode.insertBefore(list, elem.nextSibling);
+
+	// now hide the original select
+	elem.style.display = "none";
+
+	// iterate over all the options in this select
+	var all_items = [];
+	for (var i = 0; i < elem.children.length; ++ i)
 	{
-		throw "After an '" + _radio_class + "' there must be a label!";
+		// if this child is not option, skip
+		var option = elem.children[i];
+		if (option.tagName != "OPTION") continue;
+
+		// add the new option as list item
+		var item = RPGUI.create_element("li");
+		item.innerHTML = option.innerHTML;
+		list.appendChild(item);
+
+		// set dataset value
+		item.dataset['rpguivalue'] = option.value;
+
+		// add to list of all items
+		all_items.push(item);
+
+		// copy all event listeners from original option to the new item
+		RPGUI.copy_event_listeners(option, item);
+
+		// set option callback (note: wrapped inside namespace to preserve vars)
+		(function(elem, option, item, list, all_items)
+		{
+			// when clicking the customized option
+			item.addEventListener('click', function()
+			{
+				// select the option in the original selection
+				option.selected = true;
+				RPGUI.fire_event(elem, "change");
+			});
+
+		})(elem, option, item, list, all_items);
 	}
 
-	// copy all event listeners and events
-	RPGUI.copy_event_listeners(elem, new_radio);
-
-	// do the click event for the new radio
-	(function(elem, new_radio)
+	// if got any items set list height based on the size param
+	if (all_items.length && elem.size)
 	{
-		new_radio.addEventListener("click", function()
-		{
-			RPGUI.set_value(elem, true);
+		
+		// get the actual height of a single item in list
+		var height = all_items[0].offsetHeight;
 
+		// set list height based on size
+		list.style.height = (height * elem.size) + "px";
+		
+	}
+	
+	// lastly, listen to when the original select changes and update the customized list
+	(function(elem, all_items)
+	{
+		// handle value change
+		elem.addEventListener('change', function()
+		{
+			_on_change(this);
 		});
-	})(elem, new_radio);
+		function _on_change(elem)
+		{
+			for (var i = 0; i < all_items.length; ++i)
+			{
+				var item = all_items[i];
+				if (item.dataset['rpguivalue'] == elem.value)
+				{
+					RPGUI.add_class(item, "rpgui-selected");
+				}
+				else
+				{
+					RPGUI.remove_class(item, "rpgui-selected");
+				}
+			}
+		}
+
+		// call the on-change on init to set initial state
+		_on_change(elem);
+
+	})(elem, all_items);
 }
-
-
-// rpgui-select-dropdown.js
-
+
+
+// utils.js
+
+/**
+* Some helpers and utils.
+*/
+
+
+// create and return html element for rpgui internal mechanisms
+// element is string, element type (like "div" or "p")
+RPGUI.create_element = function(element)
+{
+    // create element
+    element = document.createElement(element);
+
+    // return element
+    return element;
+}
+
+// set cursor for given element
+// element is element to set.
+// cursor is string, what cursor to use (default / point / .. see cursor.css for more info ).
+RPGUI.set_cursor = function(element, cursor)
+{
+    RPGUI.add_class(element, "rpgui-cursor-" + cursor);
+}
+
+// prevent element dragging
+RPGUI.prevent_drag = function(element)
+{
+    /*
+    // this code was removed because I found a cross-browser way to cover it all via css.
+    element.draggable=false;
+    element.ondrop=function(){return false;}
+    element.ondragstart=function(){return false;}
+    */
+}
+
+// check if element have class
+RPGUI.has_class = function(element, cls)
+{
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+};
+
+// add class to element (but only if don't already have it)
+RPGUI.add_class = function(element, cls)
+{
+    if (!RPGUI.has_class(element, cls))
+    {
+        element.className += " " + cls;
+    }
+};
+
+// get child element with classname
+RPGUI.get_child_with_class = function(elem, cls)
+{
+    for (var i = 0; i < elem.childNodes.length; i++)
+    {
+        if (RPGUI.has_class(elem.childNodes[i], cls))
+        {
+          return elem.childNodes[i];
+        }
+    }
+};
+
+// remove a class from an element
+RPGUI.remove_class = function(element, cls)
+{
+    element.className = (' ' + element.className + ' ').replace(cls, "");
+    element.className = element.className.substring(1, element.className.length-1);
+};
+
+// fire event from element
+// type should be string like "change", "click", "mouseup", etc.
+RPGUI.fire_event = function(element, type)
+{
+    // firing the event properly according to StackOverflow
+    // http://stackoverflow.com/questions/2856513/how-can-i-trigger-an-onchange-event-manually
+    if ("createEvent" in document) {
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent(type, false, true);
+        element.dispatchEvent(evt);
+    }
+    else {
+        element.fireEvent("on" + type);
+    }
+}
+
+// copy all event listeners from one element to the other
+RPGUI.copy_event_listeners = function(from, to)
+{
+    // copy all event listeners
+    if (typeof getEventListeners == "function")
+    {
+        var events = getEventListeners(from);
+        for(var p in events) {
+            events[p].forEach(function(ev) {
+                // {listener: Function, useCapture: Boolean}
+                to.addEventListener(p, ev.listener, ev.useCapture);
+            });
+        }
+    }
+
+    // now copy all attributes that start with "on"
+    for (attr in from)
+    {
+        if (attr.indexOf("on") === 0)
+        {
+            to[attr] = from[attr];
+        }
+    }
+}
+
+// insert one html element after another given element
+RPGUI.insert_after = function(to_insert, after_element)
+{
+    after_element.parentNode.insertBefore(to_insert, after_element.nextSibling);
+}
+
+// rpgui-select-dropdown.js
+
 /**
 * This script generate the rpgui dropdown <select>.
 * This will replace automatically every <select> element that has the "rpgui-dropdown" class.
@@ -622,135 +605,260 @@ function create_dropdown(elem)
 	// call the on-change to set starting value
 	RPGUI.update(elem);
 }
-
-
-// rpgui-select-list.js
-
+
+
+// rpgui-radio.js
+
 /**
-* This script generate the rpgui list <select>.
-* This will replace automatically every <select> element that has the "rpgui-list" class.
+* This script generate the rpgui radio class.
+* This will replace automatically every <input> element that has the "rpgui-radio" class.
 */
 
 
-// class name we will convert to list
-var _list_class = "rpgui-list";
+// class name we will convert to special radio
+var _radio_class = "rpgui-radio";
 
-// create a rpgui-list from a given element.
-// note: element must be <select> with <option> tags that will turn into the items
-RPGUI.__create_funcs["list"] = function(element)
+// create a rpgui-radio from a given element.
+// note: element must be <input> of type "radio" for this to work properly.
+RPGUI.__create_funcs["radio"] = function(element)
 {
-	RPGUI.add_class(element, _list_class);
-	create_list(element);
+	RPGUI.add_class(element, _radio_class);
+	create_radio(element);
 };
 
-// init all list elements on page load
+// set function to set value of the radio
+RPGUI.__set_funcs["radio"] = function(elem, value)
+{
+	elem.checked = value;
+};
+
+// set function to get value of the radio button
+RPGUI.__get_funcs["radio"] = function(elem)
+{
+	return elem.checked;
+};
+
+// init all radio elements on page load
 RPGUI.on_load(function()
 {
-	// get all the select elements we need to upgrade
-	var elems = document.getElementsByClassName(_list_class);
+	// get all the input elements we need to upgrade
+	var elems = document.getElementsByClassName(_radio_class);
 
 	// iterate the selects and upgrade them
 	for (var i = 0; i < elems.length; ++i)
 	{
-		RPGUI.create(elems[i], "list");
+		RPGUI.create(elems[i], "radio");
 	}
 });
 
-// upgrade a single "select" element to the beautiful list
-function create_list(elem)
+// upgrade a single "input" element to the beautiful radio class
+function create_radio(elem)
 {
-	// default list size is 3
-	if (!elem.size) elem.size = 3;
+	// get next sibling, assuming its the radio label.
+	// this object will be turned into the new radio.
+	var new_radio = elem.nextSibling;
 
-	// create the list to hold all the options
-	var list = RPGUI.create_element("ul");
-	RPGUI.add_class(list, "rpgui-list-imp");
-	elem.parentNode.insertBefore(list, elem.nextSibling);
-
-	// now hide the original select
-	elem.style.display = "none";
-
-	// iterate over all the options in this select
-	var all_items = [];
-	for (var i = 0; i < elem.children.length; ++ i)
+	// validate
+	if (!new_radio || new_radio.tagName !== "LABEL")
 	{
-		// if this child is not option, skip
-		var option = elem.children[i];
-		if (option.tagName != "OPTION") continue;
-
-		// add the new option as list item
-		var item = RPGUI.create_element("li");
-		item.innerHTML = option.innerHTML;
-		list.appendChild(item);
-
-		// set dataset value
-		item.dataset['rpguivalue'] = option.value;
-
-		// add to list of all items
-		all_items.push(item);
-
-		// copy all event listeners from original option to the new item
-		RPGUI.copy_event_listeners(option, item);
-
-		// set option callback (note: wrapped inside namespace to preserve vars)
-		(function(elem, option, item, list, all_items)
-		{
-			// when clicking the customized option
-			item.addEventListener('click', function()
-			{
-				// select the option in the original selection
-				option.selected = true;
-				RPGUI.fire_event(elem, "change");
-			});
-
-		})(elem, option, item, list, all_items);
+		throw "After an '" + _radio_class + "' there must be a label!";
 	}
 
-	// if got any items set list height based on the size param
-	if (all_items.length && elem.size)
-	{
-		
-		// get the actual height of a single item in list
-		var height = all_items[0].offsetHeight;
+	// copy all event listeners and events
+	RPGUI.copy_event_listeners(elem, new_radio);
 
-		// set list height based on size
-		list.style.height = (height * elem.size) + "px";
-		
-	}
-	
-	// lastly, listen to when the original select changes and update the customized list
-	(function(elem, all_items)
+	// do the click event for the new radio
+	(function(elem, new_radio)
 	{
-		// handle value change
-		elem.addEventListener('change', function()
+		new_radio.addEventListener("click", function()
 		{
-			_on_change(this);
+			RPGUI.set_value(elem, true);
+
 		});
-		function _on_change(elem)
-		{
-			for (var i = 0; i < all_items.length; ++i)
-			{
-				var item = all_items[i];
-				if (item.dataset['rpguivalue'] == elem.value)
-				{
-					RPGUI.add_class(item, "rpgui-selected");
-				}
-				else
-				{
-					RPGUI.remove_class(item, "rpgui-selected");
-				}
-			}
-		}
-
-		// call the on-change on init to set initial state
-		_on_change(elem);
-
-	})(elem, all_items);
+	})(elem, new_radio);
 }
-
-
-// rpgui-slider.js
-
+
+
+// rpgui-draggable.js
+
+/**
+* This script add the dragging functionality to all elements with "rpgui-draggable" class.
+*/
+
+
+// element currently dragged
+var _curr_dragged = null;
+var _curr_dragged_point = null;
+var _dragged_z = 1000;
+
+// class name we consider as draggable
+var _draggable_class = "rpgui-draggable";
+
+// set element as draggable
+// note: this also add the "rpgui-draggable" css class to the element.
+RPGUI.__create_funcs["draggable"] = function(element)
+{
+	// prevent forms of default dragging on this element
+	element.draggable = false;
+	element.ondragstart = function() {return false;}
+
+	// add the mouse down event listener
+	RPGUI.add_class(element, _draggable_class);
+	element.addEventListener('mousedown', mouseDown);
+};
+
+// init all draggable elements (objects with "rpgui-draggable" class)
+RPGUI.on_load(function()
+{
+	// init all draggable elements
+	var elems = document.getElementsByClassName(_draggable_class);
+	for (var i = 0; i < elems.length; ++i)
+	{
+		RPGUI.create(elems[i], "draggable");
+	}
+
+	// add mouseup event on window to stop dragging
+	window.addEventListener('mouseup', mouseUp);
+});
+
+// stop drag
+function mouseUp(e)
+{
+	_curr_dragged = null;
+	window.removeEventListener('mousemove', divMove);
+}
+
+// start drag
+function mouseDown(e){
+
+	// set dragged object and make sure its really draggable
+	var target = e.target || e.srcElement;
+	if (!RPGUI.has_class(target, _draggable_class)) {return;}
+		
+	_curr_dragged = target;
+	
+	// set holding point
+	var rect = _curr_dragged.getBoundingClientRect();
+	_curr_dragged_point = {x: rect.left-e.clientX, y: rect.top-e.clientY};
+
+	// add z-index to top this element
+	target.style.zIndex = _dragged_z++;
+	
+	// begin dragging
+	window.addEventListener('mousemove', divMove, true);
+
+}
+
+// dragging
+function divMove(e){
+	if (_curr_dragged)
+	{
+		_curr_dragged.style.position = 'absolute';
+		_curr_dragged.style.left = (e.clientX + _curr_dragged_point.x) + 'px';
+		_curr_dragged.style.top = (e.clientY + _curr_dragged_point.y) + 'px';
+	}
+}
+
+
+// rpgui-content.js
+
+/**
+* Init rpgui content and what's inside.
+*/
+
+// init all the rpgui containers and their children
+RPGUI.on_load(function()
+{
+	// get all containers and iterate them
+	var contents = document.getElementsByClassName("rpgui-content");
+	for (var i = 0; i < contents.length; ++i)
+	{
+		// get current container and init it
+		var content = contents[i];
+
+		// prevent dragging
+		RPGUI.prevent_drag(content);
+
+		// set default cursor
+		RPGUI.set_cursor(content, "default");
+	}
+});
+
+
+// rpgui-checkbox.js
+
+/**
+* This script generate the rpgui checkbox class.
+* This will replace automatically every <input> element that has the "rpgui-checkbox" class.
+*/
+
+
+// class name we will convert to special checkbox
+var _checkbox_class = "rpgui-checkbox";
+
+// create a rpgui-checkbox from a given element.
+// note: element must be <input> of type "checkbox" for this to work properly.
+RPGUI.__create_funcs["checkbox"] = function(element)
+{
+	RPGUI.add_class(element, _checkbox_class);
+	create_checkbox(element);
+};
+
+// set function to set value of the checkbox
+RPGUI.__set_funcs["checkbox"] = function(elem, value)
+{
+	elem.checked = value;
+};
+
+// set function to get value of the checkbox
+RPGUI.__get_funcs["checkbox"] = function(elem)
+{
+	return elem.checked;
+};
+
+// init all checkbox elements on page load
+RPGUI.on_load(function()
+{
+	// get all the input elements we need to upgrade
+	var elems = document.getElementsByClassName(_checkbox_class);
+
+	// iterate the selects and upgrade them
+	for (var i = 0; i < elems.length; ++i)
+	{
+		RPGUI.create(elems[i], "checkbox");
+	}
+});
+
+// upgrade a single "input" element to the beautiful checkbox class
+function create_checkbox(elem)
+{
+	// get next sibling, assuming its the checkbox label.
+	// this object will be turned into the new checkbox.
+	var new_checkbox = elem.nextSibling;
+
+	// validate
+	if (!new_checkbox || new_checkbox.tagName !== "LABEL")
+	{
+		throw "After an '" + _checkbox_class + "' there must be a label!";
+	}
+
+	// copy all event listeners and events
+	RPGUI.copy_event_listeners(elem, new_checkbox);
+
+	// do the click event for the new checkbox
+	(function(elem, new_checkbox)
+	{
+		new_checkbox.addEventListener("click", function()
+		{
+			RPGUI.set_value(elem, !elem.checked);
+
+		});
+	})(elem, new_checkbox);
+}
+
+
+// rpgui-slider.js
+
 /**
 * This script generate the rpgui slider class.
 * This will replace automatically every <input> element that has the "rpgui-slider" class.
@@ -919,124 +1027,6 @@ function create_slider(elem)
 
 	})(elem, slider_container, thumb, track, state, right_edge, left_edge);
 
-}
-
-// utils.js
-
-/**
-* Some helpers and utils.
-*/
-
-
-// create and return html element for rpgui internal mechanisms
-// element is string, element type (like "div" or "p")
-RPGUI.create_element = function(element)
-{
-    // create element
-    element = document.createElement(element);
-
-    // return element
-    return element;
 }
 
-// set cursor for given element
-// element is element to set.
-// cursor is string, what cursor to use (default / point / .. see cursor.css for more info ).
-RPGUI.set_cursor = function(element, cursor)
-{
-    RPGUI.add_class(element, "rpgui-cursor-" + cursor);
-}
-
-// prevent element dragging
-RPGUI.prevent_drag = function(element)
-{
-    /*
-    // this code was removed because I found a cross-browser way to cover it all via css.
-    element.draggable=false;
-    element.ondrop=function(){return false;}
-    element.ondragstart=function(){return false;}
-    */
-}
-
-// check if element have class
-RPGUI.has_class = function(element, cls)
-{
-    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-};
-
-// add class to element (but only if don't already have it)
-RPGUI.add_class = function(element, cls)
-{
-    if (!RPGUI.has_class(element, cls))
-    {
-        element.className += " " + cls;
-    }
-};
-
-// get child element with classname
-RPGUI.get_child_with_class = function(elem, cls)
-{
-    for (var i = 0; i < elem.childNodes.length; i++)
-    {
-        if (RPGUI.has_class(elem.childNodes[i], cls))
-        {
-          return elem.childNodes[i];
-        }
-    }
-};
-
-// remove a class from an element
-RPGUI.remove_class = function(element, cls)
-{
-    element.className = (' ' + element.className + ' ').replace(cls, "");
-    element.className = element.className.substring(1, element.className.length-1);
-};
-
-// fire event from element
-// type should be string like "change", "click", "mouseup", etc.
-RPGUI.fire_event = function(element, type)
-{
-    // firing the event properly according to StackOverflow
-    // http://stackoverflow.com/questions/2856513/how-can-i-trigger-an-onchange-event-manually
-    if ("createEvent" in document) {
-        var evt = document.createEvent("HTMLEvents");
-        evt.initEvent(type, false, true);
-        element.dispatchEvent(evt);
-    }
-    else {
-        element.fireEvent("on" + type);
-    }
-}
-
-// copy all event listeners from one element to the other
-RPGUI.copy_event_listeners = function(from, to)
-{
-    // copy all event listeners
-    if (typeof getEventListeners == "function")
-    {
-        var events = getEventListeners(from);
-        for(var p in events) {
-            events[p].forEach(function(ev) {
-                // {listener: Function, useCapture: Boolean}
-                to.addEventListener(p, ev.listener, ev.useCapture);
-            });
-        }
-    }
-
-    // now copy all attributes that start with "on"
-    for (attr in from)
-    {
-        if (attr.indexOf("on") === 0)
-        {
-            to[attr] = from[attr];
-        }
-    }
-}
-
-// insert one html element after another given element
-RPGUI.insert_after = function(to_insert, after_element)
-{
-    after_element.parentNode.insertBefore(to_insert, after_element.nextSibling);
-}
-
 return RPGUI;})();

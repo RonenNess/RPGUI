@@ -39,8 +39,8 @@
 {
     position: absolute;
     height: 42px;
-    left: 10px;
-    right: 10px;
+    left: 40px;
+    right: 40px;
     background-image: url('img/progress-bar-track.png');
     background-repeat: repeat-x;
     background-size: 36px 100%;
@@ -53,8 +53,8 @@
     position: absolute;
     top: 9px;
     bottom: 8px;
-    left: 10px;
-    right: 10px;
+    left: 0;
+    width: 100%;
     background-image: url('img/progress.png');
     background-repeat: repeat-x;
     background-size: 36px 100%;
