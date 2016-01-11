@@ -36,6 +36,7 @@ function create_slider(elem)
 
 	// create the containing div for the new slider
 	var slider_container = RPGUI.create_element("div");
+	RPGUI.copy_css(elem, slider_container);
 	RPGUI.add_class(slider_container, "rpgui-slider-container" + golden);
 
 	// insert the slider container

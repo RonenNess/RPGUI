@@ -12,7 +12,7 @@ RPGUI.create_element = function(element)
 
     // return element
     return element;
-}
+};
 
 // set cursor for given element
 // element is element to set.
@@ -20,7 +20,7 @@ RPGUI.create_element = function(element)
 RPGUI.set_cursor = function(element, cursor)
 {
     RPGUI.add_class(element, "rpgui-cursor-" + cursor);
-}
+};
 
 // prevent element dragging
 RPGUI.prevent_drag = function(element)
@@ -31,7 +31,13 @@ RPGUI.prevent_drag = function(element)
     element.ondrop=function(){return false;}
     element.ondragstart=function(){return false;}
     */
-}
+};
+
+// copy the style of one element into another
+RPGUI.copy_css = function(from, to)
+{
+    to.style.cssText = from.style.cssText;
+};
 
 // check if element have class
 RPGUI.has_class = function(element, cls)
@@ -81,7 +87,7 @@ RPGUI.fire_event = function(element, type)
     else {
         element.fireEvent("on" + type);
     }
-}
+};
 
 // copy all event listeners from one element to the other
 RPGUI.copy_event_listeners = function(from, to)
@@ -106,10 +112,10 @@ RPGUI.copy_event_listeners = function(from, to)
             to[attr] = from[attr];
         }
     }
-}
+};
 
 // insert one html element after another given element
 RPGUI.insert_after = function(to_insert, after_element)
 {
     after_element.parentNode.insertBefore(to_insert, after_element.nextSibling);
-}
+};
