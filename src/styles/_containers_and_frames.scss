@@ -15,11 +15,11 @@
 {
 	/* border */
 	border-style: solid;
-	border-width: 25px 25px 25px 25px;
-	-moz-border-image: url("img/border-image.png") 25% repeat repeat;
-	-webkit-border-image: url("img/border-image.png") 25% repeat repeat;
-	-o-border-image: url("img/border-image.png") 25% repeat repeat;
-	border-image: url("img/border-image.png") 25% repeat repeat;
+	border-image-source: url("img/border-image.png");
+	border-image-repeat: repeat;
+	border-image-slice: 6 6 6 6;
+	border-image-width: 18px;
+	padding: 25px;
 
 	/* internal border */
 	box-sizing: border-box;
@@ -38,11 +38,11 @@
 {
 	/* border */
 	border-style: solid;
-	border-width: 25px 25px 25px 25px;
-	-moz-border-image: url("img/border-image-golden.png") 25% repeat repeat;
-	-webkit-border-image: url("img/border-image-golden.png") 25% repeat repeat;
-	-o-border-image: url("img/border-image-golden.png") 25% repeat repeat;
-	border-image: url("img/border-image-golden.png") 25% repeat repeat;
+	border-image-source: url("img/border-image-golden.png");
+	border-image-repeat: repeat;
+	border-image-slice: 4 4 4 4;
+	border-image-width: 13px;
+	padding: 25px;
 
 	/* internal border */
 	box-sizing: border-box;
@@ -61,11 +61,11 @@
 {
 	/* border */
 	border-style: solid;
-	border-width: 25px 25px 25px 25px;
-	-moz-border-image: url("img/border-image-golden2.png") 25% repeat repeat;
-	-webkit-border-image: url("img/border-image-golden2.png") 25% repeat repeat;
-	-o-border-image: url("img/border-image-golden2.png") 25% repeat repeat;
-	border-image: url("img/border-image-golden2.png") 25% repeat repeat;
+	border-image-source: url("img/border-image-golden2.png");
+	border-image-repeat: repeat;
+	border-image-slice: 8 8 8 8;
+	border-image-width: 18px;
+	padding: 25px;
 
 	/* internal border */
 	box-sizing: border-box;

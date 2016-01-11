@@ -1,0 +1,15 @@
+[
+  "src/scripts/_header.js",
+  "src/scripts/init.js",
+  "src/scripts/global_methods.js",
+  "src/scripts/rpgui-checkbox.js",
+  "src/scripts/rpgui-content.js",
+  "src/scripts/rpgui-draggable.js",
+  "src/scripts/rpgui-progress-bar.js",
+  "src/scripts/rpgui-radio.js",
+  "src/scripts/rpgui-select-dropdown.js",
+  "src/scripts/rpgui-select-list.js",
+  "src/scripts/rpgui-slider.js",
+  "src/scripts/utils.js",
+  "src/scripts/_footer.js"
+]

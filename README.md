@@ -416,6 +416,13 @@ To change the css rules / JavaScript itself you will need to edit the source fil
 
 Feel free to create alternatives of RPGUI and publish them as different themes.
 
+## How to build
+
+```
+npm install
+gulp dist
+```
+
 ## Changelog
 
 ## Credits
