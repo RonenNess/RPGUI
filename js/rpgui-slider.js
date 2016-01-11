@@ -80,7 +80,8 @@ function create_slider(elem)
 	(function(elem, slider_container, thumb, track, state, right_edge, left_edge)
 	{
 			// get the range of the original slider (min and max)
-			var min = parseFloat(elem.min); var max = parseFloat(elem.max);
+			var min = parseFloat(elem.min);
+			var max = parseFloat(elem.max);
 
 			// calculate edges width and track actual width
 			var edges_width = right_edge.offsetWidth + left_edge.offsetWidth;
@@ -127,7 +128,7 @@ function create_slider(elem)
 			function slide(pos)
 			{
 					// calc new slider value
-					var new_val = min + Math.round((pos / track_width) * max) - 1;
+					var new_val = min + Math.round((pos / track_width) * (max-min)) - 1;
 
 					// set thumb position
 					set_value(new_val);
@@ -159,7 +160,8 @@ function create_slider(elem)
 			{
 					// get the range of the original slider (min and max)
 					var step = track_width / (max-min);
-					thumb.style.left = Math.floor(edges_width * 0.25) + Math.round((parseFloat(elem.value) - min) * step) + "px";
+					var relative_val = Math.round(parseFloat(elem.value) - min);
+					thumb.style.left = (Math.floor(edges_width * 0.25) + (relative_val * step)) + "px";
 			}
 
 			// call "_onchange()" to init the thumb starting position
