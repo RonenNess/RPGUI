@@ -612,7 +612,7 @@ function create_dropdown(elem)
 		// register the update function and call it to set initial state
 		elem.addEventListener('change', _on_change);
 		_on_change();
-
+		
 	})(elem, select_header, list);
 }
 

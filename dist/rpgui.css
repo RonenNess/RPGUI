@@ -800,6 +800,16 @@ ul.rpgui-list-imp
     -ms-transform-origin: 0% 50%; /* IE 9 */
     -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
     transform-origin: 0% 50%;
+}
+
+/* disabled object */
+.rpgui-disabled
+{
+  -webkit-filter: grayscale(1);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(#greyscale);
+  filter: gray;
 }
 
 /* paragraphs_and_headers.css */
