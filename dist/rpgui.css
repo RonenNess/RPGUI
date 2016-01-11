@@ -232,7 +232,8 @@ inside your html file.
 .rpgui-container {
   /* position style and default z */
   position: fixed;
-  z-index: 10; }
+  z-index: 10;
+  overflow: hidden; }
 
 /* game div with background image*/
 .rpgui-container.framed {
@@ -242,7 +243,8 @@ inside your html file.
   border-image-repeat: repeat;
   border-image-slice: 6 6 6 6;
   border-image-width: 18px;
-  padding: 25px;
+  border-width: 13px;
+  padding: 12px;
   /* internal border */
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -260,8 +262,9 @@ inside your html file.
   border-image-source: url("img/border-image-golden.png");
   border-image-repeat: repeat;
   border-image-slice: 4 4 4 4;
-  border-image-width: 13px;
-  padding: 25px;
+  border-image-width: 15px;
+  border-width: 13px;
+  padding: 12px;
   /* internal border */
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -280,7 +283,8 @@ inside your html file.
   border-image-repeat: repeat;
   border-image-slice: 8 8 8 8;
   border-image-width: 18px;
-  padding: 25px;
+  border-width: 13px;
+  padding: 12px;
   /* internal border */
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -296,11 +300,12 @@ inside your html file.
   position: relative;
   /* border */
   border-style: solid;
-  border-width: 25px 25px 25px 25px;
-  -moz-border-image: url("img/border-image-grey.png") 25% repeat repeat;
-  -webkit-border-image: url("img/border-image-grey.png") 25% repeat repeat;
-  -o-border-image: url("img/border-image-grey.png") 25% repeat repeat;
-  border-image: url("img/border-image-grey.png") 25% repeat repeat;
+  border-image-source: url("img/border-image-grey.png");
+  border-image-repeat: repeat;
+  border-image-slice: 3 3 3 3;
+  border-image-width: 7px;
+  border-width: 7px;
+  padding: 12px;
   /* internal border */
   box-sizing: border-box;
   -moz-box-sizing: border-box;
