@@ -520,11 +520,13 @@ function create_dropdown(elem)
 
 	// create the paragraph that will display the select_header option
 	var select_header = RPGUI.create_element("p");
+	if (elem.id) {select_header.id = elem.id + "-rpgui-dropdown-head"};
 	RPGUI.add_class(select_header, "rpgui-dropdown-imp rpgui-dropdown-imp-header");
 	RPGUI.insert_after(select_header, elem);
 
 	// create the list to hold all the options
 	var list = RPGUI.create_element("ul");
+	if (elem.id) {list.id = elem.id + "-rpgui-dropdown"};
 	RPGUI.add_class(list, "rpgui-dropdown-imp");
 	RPGUI.insert_after(list, select_header);
 
@@ -657,6 +659,7 @@ function create_list(elem)
 
 	// create the list to hold all the options
 	var list = RPGUI.create_element("ul");
+	if (elem.id) {list.id = elem.id + "-rpgui-list"};
 	RPGUI.add_class(list, "rpgui-list-imp");
 	elem.parentNode.insertBefore(list, elem.nextSibling);
 
@@ -782,6 +785,7 @@ function create_slider(elem)
 
 	// create the containing div for the new slider
 	var slider_container = RPGUI.create_element("div");
+	if (elem.id) {slider_container.id = elem.id + "-rpgui-slider"};
 	RPGUI.copy_css(elem, slider_container);
 	RPGUI.add_class(slider_container, "rpgui-slider-container" + golden);
 

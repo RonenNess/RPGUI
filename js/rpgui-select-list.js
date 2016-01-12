@@ -36,6 +36,7 @@ function create_list(elem)
 
 	// create the list to hold all the options
 	var list = RPGUI.create_element("ul");
+	if (elem.id) {list.id = elem.id + "-rpgui-list"};
 	RPGUI.add_class(list, "rpgui-list-imp");
 	elem.parentNode.insertBefore(list, elem.nextSibling);
 

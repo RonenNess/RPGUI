@@ -36,11 +36,13 @@ function create_dropdown(elem)
 
 	// create the paragraph that will display the select_header option
 	var select_header = RPGUI.create_element("p");
+	if (elem.id) {select_header.id = elem.id + "-rpgui-dropdown-head"};
 	RPGUI.add_class(select_header, "rpgui-dropdown-imp rpgui-dropdown-imp-header");
 	RPGUI.insert_after(select_header, elem);
 
 	// create the list to hold all the options
 	var list = RPGUI.create_element("ul");
+	if (elem.id) {list.id = elem.id + "-rpgui-dropdown"};
 	RPGUI.add_class(list, "rpgui-dropdown-imp");
 	RPGUI.insert_after(list, select_header);
 
