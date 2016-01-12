@@ -12,7 +12,6 @@
 .rpgui-content input[type=radio].rpgui-radio + label
 {
     background: url('img/radio-off.png') no-repeat;
-    font-size: 12px;
 	line-height: 24px;
     display: inline-block;
     background-size: auto 100%;
@@ -25,7 +24,6 @@
 .rpgui-content input[type=radio].rpgui-radio:checked + label
 {
     background: url('img/radio-on.png') no-repeat;
-    font-size: 12px;
 	line-height: 24px;
     display: inline-block;
     background-size: auto 100%;

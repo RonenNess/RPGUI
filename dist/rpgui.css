@@ -41,6 +41,14 @@ inside your html file.
   /* Chrome, Safari, Opera */
   transform-origin: 0% 50%; }
 
+/* disabled object */
+.rpgui-disabled {
+  -webkit-filter: grayscale(1);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(#greyscale);
+  filter: gray; }
+
 /**
 * Styling for buttons
 */
@@ -159,7 +167,6 @@ inside your html file.
 
 .rpgui-content input[type=checkbox].rpgui-checkbox + label {
   background: url("img/checkbox-off.png") no-repeat;
-  font-size: 12px;
   line-height: 24px;
   display: inline-block;
   background-size: auto 100%;
@@ -170,7 +177,6 @@ inside your html file.
 
 .rpgui-content input[type=checkbox].rpgui-checkbox:checked + label {
   background: url("img/checkbox-on.png") no-repeat;
-  font-size: 12px;
   line-height: 24px;
   display: inline-block;
   background-size: auto 100%;
@@ -223,7 +229,8 @@ inside your html file.
   image-rendering: -o-crisp-edges;
   image-rendering: pixelated;
   /* default font */
-  font-family: 'Press Start 2P', cursive; }
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8em; }
 
 /**
 * customized divs (containers) and framed objects (background and frame image).
@@ -243,7 +250,7 @@ inside your html file.
   border-image-repeat: repeat;
   border-image-slice: 6 6 6 6;
   border-image-width: 18px;
-  border-width: 13px;
+  border-width: 15px;
   padding: 12px;
   /* internal border */
   box-sizing: border-box;
@@ -262,8 +269,8 @@ inside your html file.
   border-image-source: url("img/border-image-golden.png");
   border-image-repeat: repeat;
   border-image-slice: 4 4 4 4;
-  border-image-width: 15px;
-  border-width: 13px;
+  border-image-width: 18px;
+  border-width: 15px;
   padding: 12px;
   /* internal border */
   box-sizing: border-box;
@@ -283,7 +290,7 @@ inside your html file.
   border-image-repeat: repeat;
   border-image-slice: 8 8 8 8;
   border-image-width: 18px;
-  border-width: 13px;
+  border-width: 15px;
   padding: 12px;
   /* internal border */
   box-sizing: border-box;
@@ -366,9 +373,8 @@ label {
 .rpgui-dropdown-imp,
 .rpgui-dropdown {
   /* font */
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  text-shadow: 0 2px black;
   color: white;
-  font-size: 12px;
   /* default size */
   min-height: 40px;
   margin-top: 0px;
@@ -402,9 +408,8 @@ ul.rpgui-dropdown-imp {
 /* dropdown options */
 .rpgui-dropdown-imp li {
   /* font */
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  text-shadow: 0 2px black;
   color: white;
-  font-size: 12px;
   height: 16px;
   /* remove the dot */
   list-style-type: none;
@@ -510,8 +515,8 @@ ul.rpgui-dropdown-imp {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: white;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 14px;
+  text-shadow: 0 2px black;
+  font-size: 1.2em;
   line-height: 32px;
   background: #4e4a4e;
   max-width: 100%;
@@ -530,7 +535,6 @@ ul.rpgui-dropdown-imp {
 
 /* textarea extra rules */
 .rpgui-content textarea {
-  font-size: 12px;
   line-height: 22px;
   padding-top: 7px;
   height: 80px;
@@ -549,8 +553,7 @@ ul.rpgui-dropdown-imp {
 /* note! this class rule affect both the dropdown header and the list elements! */
 .rpgui-list-imp {
   /* font */
-  font-family: 'Press Start 2P', cursive;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  text-shadow: 0 2px black;
   color: white;
   font-size: 12px;
   /* default size */
@@ -580,7 +583,7 @@ ul.rpgui-list-imp {
 /* dropdown options */
 .rpgui-list-imp li {
   /* font */
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  text-shadow: 0 2px black;
   color: white;
   font-size: 12px;
   height: 16px;
@@ -616,8 +619,8 @@ ul.rpgui-list-imp {
   /* color and border */
   color: white;
   font-weight: 1;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 110%;
+  text-shadow: 0 2px black;
+  font-size: 1.2em;
   /* center text */
   text-align: center;
   /* padding */
@@ -629,8 +632,8 @@ ul.rpgui-list-imp {
   /* color and border */
   color: white;
   font-weight: 500;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 100%;
+  text-shadow: 0 2px black;
+  font-size: 1em;
   /* center text */
   text-align: center;
   /* padding */
@@ -642,8 +645,8 @@ ul.rpgui-list-imp {
   /* color and border */
   color: white;
   font-weight: 1;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 90%;
+  text-shadow: 0 2px black;
+  font-size: 0.9em;
   text-decoration: underline;
   /* center text */
   text-align: center;
@@ -656,8 +659,8 @@ ul.rpgui-list-imp {
   /* color and border */
   color: white;
   font-weight: 1;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 80%;
+  text-shadow: 0 2px black;
+  font-size: 0.8em;
   text-decoration: underline;
   /* center text */
   text-align: center;
@@ -669,24 +672,24 @@ ul.rpgui-list-imp {
 .rpgui-content p {
   /* color and border */
   color: white;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 12px;
+  text-shadow: 0 2px black;
+  font-size: 1em;
   line-height: 22px; }
 
 /* default span */
 .rpgui-content span {
   /* color and border */
   color: white;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 12px;
+  text-shadow: 0 2px black;
+  font-size: 1em;
   line-height: 22px; }
 
 /* default gui link */
 .rpgui-content a {
   /* color and border */
   color: yellow;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 12px;
+  text-shadow: 0 2px black;
+  font-size: 1em;
   line-height: 22px;
   text-decoration: none; }
 
@@ -698,8 +701,8 @@ ul.rpgui-list-imp {
 .rpgui-content label {
   /* color and border */
   color: white;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 10px;
+  text-shadow: 0 2px black;
+  font-size: 0.9em;
   line-height: 20px;
   display: inline; }
 
@@ -708,8 +711,8 @@ ul.rpgui-list-imp {
   /* color and border */
   margin-left: 20px;
   color: white;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 12px;
+  text-shadow: 0 2px black;
+  font-size: 1em;
   line-height: 22px; }
 
 /*
@@ -783,7 +786,6 @@ ul.rpgui-list-imp {
 
 .rpgui-content input[type=radio].rpgui-radio + label {
   background: url("img/radio-off.png") no-repeat;
-  font-size: 12px;
   line-height: 24px;
   display: inline-block;
   background-size: auto 100%;
@@ -794,7 +796,6 @@ ul.rpgui-list-imp {
 
 .rpgui-content input[type=radio].rpgui-radio:checked + label {
   background: url("img/radio-on.png") no-repeat;
-  font-size: 12px;
   line-height: 24px;
   display: inline-block;
   background-size: auto 100%;

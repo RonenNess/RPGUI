@@ -12,7 +12,6 @@
 .rpgui-content input[type=checkbox].rpgui-checkbox + label
 {
     background: url('img/checkbox-off.png') no-repeat;
-    font-size: 12px;
 	line-height: 24px;
     display: inline-block;
     background-size: auto 100%;
@@ -25,7 +24,6 @@
 .rpgui-content input[type=checkbox].rpgui-checkbox:checked + label
 {
     background: url('img/checkbox-on.png') no-repeat;
-    font-size: 12px;
 	line-height: 24px;
     display: inline-block;
     background-size: auto 100%;

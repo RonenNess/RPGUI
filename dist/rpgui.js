@@ -569,7 +569,8 @@ function create_dropdown(elem)
 	// lastly, listen to when the original select changes and update the customized list
 	(function(elem, select_header, list)
 	{
-		elem.addEventListener('change', function()
+		// the function to update dropdown
+		_on_change = function()
 		{
 			// set the header html and hide the list
 			if (elem.selectedIndex != -1)
@@ -581,11 +582,13 @@ function create_dropdown(elem)
 				select_header.innerHTML = arrow_down_prefix;
 			}
 			list.style.display = "none";
-		});
+		}
+
+		// register the update function and call it to set initial state
+		elem.addEventListener('change', _on_change);
+		_on_change();
+		
 	})(elem, select_header, list);
-	
-	// call the on-change to set starting value
-	RPGUI.update(elem);
 }
 
 /**
@@ -748,6 +751,7 @@ function create_slider(elem)
 
 	// create the containing div for the new slider
 	var slider_container = RPGUI.create_element("div");
+	RPGUI.copy_css(elem, slider_container);
 	RPGUI.add_class(slider_container, "rpgui-slider-container" + golden);
 
 	// insert the slider container
@@ -791,7 +795,8 @@ function create_slider(elem)
 	(function(elem, slider_container, thumb, track, state, right_edge, left_edge)
 	{
 			// get the range of the original slider (min and max)
-			var min = parseFloat(elem.min); var max = parseFloat(elem.max);
+			var min = parseFloat(elem.min);
+			var max = parseFloat(elem.max);
 
 			// calculate edges width and track actual width
 			var edges_width = right_edge.offsetWidth + left_edge.offsetWidth;
@@ -838,7 +843,7 @@ function create_slider(elem)
 			function slide(pos)
 			{
 					// calc new slider value
-					var new_val = min + Math.round((pos / track_width) * max) - 1;
+					var new_val = min + Math.round((pos / track_width) * (max-min)) - 1;
 
 					// set thumb position
 					set_value(new_val);
@@ -870,7 +875,8 @@ function create_slider(elem)
 			{
 					// get the range of the original slider (min and max)
 					var step = track_width / (max-min);
-					thumb.style.left = Math.floor(edges_width * 0.25) + Math.round((parseFloat(elem.value) - min) * step) + "px";
+					var relative_val = Math.round(parseFloat(elem.value) - min);
+					thumb.style.left = (Math.floor(edges_width * 0.25) + (relative_val * step)) + "px";
 			}
 
 			// call "_onchange()" to init the thumb starting position
@@ -893,7 +899,7 @@ RPGUI.create_element = function(element)
 
     // return element
     return element;
-}
+};
 
 // set cursor for given element
 // element is element to set.
@@ -901,7 +907,7 @@ RPGUI.create_element = function(element)
 RPGUI.set_cursor = function(element, cursor)
 {
     RPGUI.add_class(element, "rpgui-cursor-" + cursor);
-}
+};
 
 // prevent element dragging
 RPGUI.prevent_drag = function(element)
@@ -912,7 +918,13 @@ RPGUI.prevent_drag = function(element)
     element.ondrop=function(){return false;}
     element.ondragstart=function(){return false;}
     */
-}
+};
+
+// copy the style of one element into another
+RPGUI.copy_css = function(from, to)
+{
+    to.style.cssText = from.style.cssText;
+};
 
 // check if element have class
 RPGUI.has_class = function(element, cls)
@@ -962,7 +974,7 @@ RPGUI.fire_event = function(element, type)
     else {
         element.fireEvent("on" + type);
     }
-}
+};
 
 // copy all event listeners from one element to the other
 RPGUI.copy_event_listeners = function(from, to)
@@ -987,11 +999,11 @@ RPGUI.copy_event_listeners = function(from, to)
             to[attr] = from[attr];
         }
     }
-}
+};
 
 // insert one html element after another given element
 RPGUI.insert_after = function(to_insert, after_element)
 {
     after_element.parentNode.insertBefore(to_insert, after_element.nextSibling);
-}
+};
 return RPGUI;})();

@@ -8,9 +8,8 @@
 .rpgui-dropdown
 {
 	/* font */
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    text-shadow: 0 2px black;
     color: white;
-	font-size: 12px;
 
 	/* default size */
 	min-height: 40px;
@@ -54,9 +53,8 @@ ul.rpgui-dropdown-imp
 .rpgui-dropdown-imp li
 {
 	/* font */
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    text-shadow: 0 2px black;
     color: white;
-	font-size: 12px;
 	height: 16px;
 
 	/* remove the dot */
