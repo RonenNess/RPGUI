@@ -110,7 +110,8 @@ function create_dropdown(elem)
 	// lastly, listen to when the original select changes and update the customized list
 	(function(elem, select_header, list)
 	{
-		elem.addEventListener('change', function()
+		// the function to update dropdown
+		_on_change = function()
 		{
 			// set the header html and hide the list
 			if (elem.selectedIndex != -1)
@@ -122,9 +123,11 @@ function create_dropdown(elem)
 				select_header.innerHTML = arrow_down_prefix;
 			}
 			list.style.display = "none";
-		});
+		}
+
+		// register the update function and call it to set initial state
+		elem.addEventListener('change', _on_change);
+		_on_change();
+		
 	})(elem, select_header, list);
-	
-	// call the on-change to set starting value
-	RPGUI.update(elem);
 }
