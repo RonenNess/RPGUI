@@ -416,14 +416,32 @@ To change the css rules / JavaScript itself you will need to edit the source fil
 
 Feel free to create alternatives of RPGUI and publish them as different themes.
 
+## How to build
+
+First install npm modules:
+
+```
+npm install
+```
+
+Then use gulp:
+
+```
+gulp dist
+```
+
+Or on windows:
+
+```
+node_modules\.bin\gulp dist
+```
+
 ## Changelog
 
 ## Credits
 
-PRGUI was developed by Ronen Ness, using public-domain graphics made by Buch (Michele Bucelli). 
-You can find Buch's profile on OGA:  http://opengameart.org/users/buch
-
-Thanks Buch!
+- PRGUI default theme uses the public-domain graphics made by Buch, aka Michele Bucelli ()http://opengameart.org/users/buch).
+- Special thanks to titoasty (https://github.com/titoasty) that contributed a lot to this lib.
 	
 ## License
 

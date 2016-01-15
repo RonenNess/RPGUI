@@ -1,9 +1,5 @@
-RPGUI = (function() {
-
-
-
-// init.js
-
+RPGUI = (function() {
+
 /**
 * init rpgui.
 * this is the first file included in the compiled js.
@@ -50,10 +46,7 @@ RPGUI.on_load = function(callback)
 	
 	// add to init list
 	RPGUI.__init_list.push(callback);
-}
-
-// global_methods.js
-
+}
 /**
 * Used to provide unified, easy javascript access to customized elements.
 */
@@ -137,10 +130,7 @@ RPGUI.get_value = function(element)
     {
         return element.value;
     }
-}
-
-// rpgui-checkbox.js
-
+}
 /**
 * This script generate the rpgui checkbox class.
 * This will replace automatically every <input> element that has the "rpgui-checkbox" class.
@@ -209,10 +199,7 @@ function create_checkbox(elem)
 		});
 	})(elem, new_checkbox);
 }
-
-
-// rpgui-content.js
-
+
 /**
 * Init rpgui content and what's inside.
 */
@@ -234,10 +221,7 @@ RPGUI.on_load(function()
 		RPGUI.set_cursor(content, "default");
 	}
 });
-
-
-// rpgui-draggable.js
-
+
 /**
 * This script add the dragging functionality to all elements with "rpgui-draggable" class.
 */
@@ -315,10 +299,7 @@ function divMove(e){
 		_curr_dragged.style.top = (e.clientY + _curr_dragged_point.y) + 'px';
 	}
 }
-
-
-// rpgui-progress-bar.js
-
+
 /**
  * This script generate the rpgui progress-bar class.
  * This will replace automatically every <div> element that has the "rpgui-progress" class.
@@ -406,10 +387,7 @@ function create_progress(elem)
 	var starting_val = elem.dataset.value !== undefined ? parseFloat(elem.dataset.value) : 1;
 	RPGUI.set_value(elem, starting_val);
 }
-
-
-// rpgui-radio.js
-
+
 /**
 * This script generate the rpgui radio class.
 * This will replace automatically every <input> element that has the "rpgui-radio" class.
@@ -478,10 +456,7 @@ function create_radio(elem)
 		});
 	})(elem, new_radio);
 }
-
-
-// rpgui-select-dropdown.js
-
+
 /**
 * This script generate the rpgui dropdown <select>.
 * This will replace automatically every <select> element that has the "rpgui-dropdown" class.
@@ -617,10 +592,7 @@ function create_dropdown(elem)
 		
 	})(elem, select_header, list);
 }
-
-
-// rpgui-select-list.js
-
+
 /**
 * This script generate the rpgui list <select>.
 * This will replace automatically every <select> element that has the "rpgui-list" class.
@@ -743,10 +715,7 @@ function create_list(elem)
 
 	})(elem, all_items);
 }
-
-
-// rpgui-slider.js
-
+
 /**
 * This script generate the rpgui slider class.
 * This will replace automatically every <input> element that has the "rpgui-slider" class.
@@ -919,10 +888,7 @@ function create_slider(elem)
 
 	})(elem, slider_container, thumb, track, state, right_edge, left_edge);
 
-}
-
-// utils.js
-
+}
 /**
 * Some helpers and utils.
 */
@@ -1043,6 +1009,5 @@ RPGUI.copy_event_listeners = function(from, to)
 RPGUI.insert_after = function(to_insert, after_element)
 {
     after_element.parentNode.insertBefore(to_insert, after_element.nextSibling);
-};
-
+};
 return RPGUI;})();

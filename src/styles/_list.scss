@@ -4,8 +4,8 @@
 .rpgui-list-imp
 {
 	/* font */
-	font-family: 'Press Start 2P', cursive;
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	//font-family: 'Press Start 2P', cursive;
+    text-shadow: 0 2px black;
     color: white;
 	font-size: 12px;
 
@@ -44,7 +44,7 @@ ul.rpgui-list-imp
 .rpgui-list-imp li
 {
 	/* font */
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    text-shadow: 0 2px black;
     color: white;
 	font-size: 12px;
 	height: 16px;
