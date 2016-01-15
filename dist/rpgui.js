@@ -9,7 +9,7 @@ RPGUI = (function() {
 var RPGUI = RPGUI || {};
 
 // lib version
-RPGUI.version = 1.02;
+RPGUI.version = 1.03;
 
 // author
 RPGUI.author = "Ronen Ness";
@@ -183,7 +183,7 @@ function create_checkbox(elem)
 	// validate
 	if (!new_checkbox || new_checkbox.tagName !== "LABEL")
 	{
-		throw "After an '" + _checkbox_class + "' there must be a label!";
+		throw "After a '" + _checkbox_class + "' there must be a label!";
 	}
 
 	// copy all event listeners and events
@@ -194,7 +194,10 @@ function create_checkbox(elem)
 	{
 		new_checkbox.addEventListener("click", function()
 		{
-			RPGUI.set_value(elem, !elem.checked);
+			if (!elem.disabled)
+			{
+				RPGUI.set_value(elem, !elem.checked);
+			}
 
 		});
 	})(elem, new_checkbox);
@@ -440,7 +443,7 @@ function create_radio(elem)
 	// validate
 	if (!new_radio || new_radio.tagName !== "LABEL")
 	{
-		throw "After an '" + _radio_class + "' there must be a label!";
+		throw "After a '" + _radio_class + "' there must be a label!";
 	}
 
 	// copy all event listeners and events
@@ -451,8 +454,10 @@ function create_radio(elem)
 	{
 		new_radio.addEventListener("click", function()
 		{
-			RPGUI.set_value(elem, true);
-
+			if (!elem.disabled)
+			{
+				RPGUI.set_value(elem, true);
+			}
 		});
 	})(elem, new_radio);
 }
@@ -556,8 +561,11 @@ function create_dropdown(elem)
 		// when clicking the selected header show / hide the options list
 		select_header.onclick = function()
 		{
-			var prev = list.style.display;
-			list.style.display = prev == "none" ? "block" : "none";
+			if (!elem.disabled)
+			{
+				var prev = list.style.display;
+				list.style.display = prev == "none" ? "block" : "none";
+			}
 		}
 
 		// when mouse leave the options list, hide it
@@ -667,8 +675,11 @@ function create_list(elem)
 			item.addEventListener('click', function()
 			{
 				// select the option in the original selection
-				option.selected = true;
-				RPGUI.fire_event(elem, "change");
+				if (!elem.disabled)
+				{
+					option.selected = true;
+					RPGUI.fire_event(elem, "change");
+				}
 			});
 
 		})(elem, option, item, list, all_items);
@@ -798,93 +809,96 @@ function create_slider(elem)
 	var state = {mouse_down: false};
 	(function(elem, slider_container, thumb, track, state, right_edge, left_edge)
 	{
-			// get the range of the original slider (min and max)
-			var min = parseFloat(elem.min);
-			var max = parseFloat(elem.max);
+		// get the range of the original slider (min and max)
+		var min = parseFloat(elem.min);
+		var max = parseFloat(elem.max);
 
-			// calculate edges width and track actual width
-			var edges_width = right_edge.offsetWidth + left_edge.offsetWidth;
-			var track_width = track.offsetWidth - edges_width;
+		// calculate edges width and track actual width
+		var edges_width = right_edge.offsetWidth + left_edge.offsetWidth;
+		var track_width = track.offsetWidth - edges_width;
 
-			// set state if moving slider or not
-			slider_container.addEventListener('mouseup', function(e)
-			{
-					state.mouse_down = false;
-			});
-			window.addEventListener('mouseup', function(e)
-			{
-					state.mouse_down = false;
-			});
-			track.addEventListener('mousedown', function(e)
-			{
-					state.mouse_down = true;
-					slide(e.offsetX || e.layerX);
-			});
-			slider_container.addEventListener('mousedown', function(e)
-			{
-					state.mouse_down = true;
-			});
+		// set state if moving slider or not
+		slider_container.addEventListener('mouseup', function(e)
+		{
+			state.mouse_down = false;
+		});
+		window.addEventListener('mouseup', function(e)
+		{
+			state.mouse_down = false;
+		});
+		track.addEventListener('mousedown', function(e)
+		{
+			state.mouse_down = true;
+			slide(e.offsetX || e.layerX);
+		});
+		slider_container.addEventListener('mousedown', function(e)
+		{
+			state.mouse_down = true;
+		});
 
-			// handle clicking on edges (set to min / max)
-			left_edge.addEventListener('mousedown', function(e)
-			{
-					set_value(min);
-			});
-			right_edge.addEventListener('mousedown', function(e)
-			{
-					set_value(max);
-			});
-			left_edge.addEventListener('mousemove', function(e)
-			{
-					if (state.mouse_down) set_value(min);
-			});
-			right_edge.addEventListener('mousemove', function(e)
-			{
-					if (state.mouse_down) set_value(max);
-			});
+		// handle clicking on edges (set to min / max)
+		left_edge.addEventListener('mousedown', function(e)
+		{
+			set_value(min);
+		});
+		right_edge.addEventListener('mousedown', function(e)
+		{
+			set_value(max);
+		});
+		left_edge.addEventListener('mousemove', function(e)
+		{
+			if (state.mouse_down) set_value(min);
+		});
+		right_edge.addEventListener('mousemove', function(e)
+		{
+			if (state.mouse_down) set_value(max);
+		});
 
-			// handle sliding
-			function slide(pos)
-			{
-					// calc new slider value
-					var new_val = min + Math.round((pos / track_width) * (max-min)) - 1;
+		// handle sliding
+		function slide(pos)
+		{
+			// calc new slider value
+			var new_val = min + Math.round((pos / track_width) * (max-min)) - 1;
 
-					// set thumb position
-					set_value(new_val);
+			// set thumb position
+			set_value(new_val);
+		}
+
+		// setting value
+		function set_value(new_val)
+		{
+			if (!elem.disabled &&
+				elem.value != new_val)
+			{
+				RPGUI.set_value(elem, new_val);
 			}
+		}
 
-			// setting value
-			function set_value(new_val)
+		// moving the slider
+		track.addEventListener('mousemove', function(e)
+		{
+			if (state.mouse_down && !elem.disabled)
 			{
-					if (elem.value == new_val) return;
-					RPGUI.set_value(elem, new_val);
+				slide(e.offsetX || e.layerX);
 			}
-
-			// moving the slider
-			track.addEventListener('mousemove', function(e)
-			{
-					if (state.mouse_down)
-					{
-							slide(e.offsetX || e.layerX);
-					}
-			});
+		});
 
 
-			// when original slider value change update thumb position
-			elem.addEventListener("change", function(e)
-			{
-					_onchange();
-			});
-			function _onchange()
-			{
-					// get the range of the original slider (min and max)
-					var step = track_width / (max-min);
-					var relative_val = Math.round(parseFloat(elem.value) - min);
-					thumb.style.left = (Math.floor(edges_width * 0.25) + (relative_val * step)) + "px";
-			}
-
-			// call "_onchange()" to init the thumb starting position
+		// when original slider value change update thumb position
+		elem.addEventListener("change", function(e)
+		{
 			_onchange();
+		});
+		function _onchange()
+		{
+			// get the range of the original slider (min and max)
+			var step = track_width / (max-min);
+			var relative_val = Math.round(parseFloat(elem.value) - min);
+			thumb.style.left = (Math.floor(edges_width * 0.25) + (relative_val * step)) + "px";
+		}
+
+		// call "_onchange()" to init the thumb starting position
+		_onchange();
 
 	})(elem, slider_container, thumb, track, state, right_edge, left_edge);
 

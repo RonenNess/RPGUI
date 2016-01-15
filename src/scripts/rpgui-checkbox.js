@@ -50,7 +50,7 @@ function create_checkbox(elem)
 	// validate
 	if (!new_checkbox || new_checkbox.tagName !== "LABEL")
 	{
-		throw "After an '" + _checkbox_class + "' there must be a label!";
+		throw "After a '" + _checkbox_class + "' there must be a label!";
 	}
 
 	// copy all event listeners and events
@@ -61,7 +61,10 @@ function create_checkbox(elem)
 	{
 		new_checkbox.addEventListener("click", function()
 		{
-			RPGUI.set_value(elem, !elem.checked);
+			if (!elem.disabled)
+			{
+				RPGUI.set_value(elem, !elem.checked);
+			}
 
 		});
 	})(elem, new_checkbox);

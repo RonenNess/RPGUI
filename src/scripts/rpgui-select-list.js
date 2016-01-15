@@ -72,8 +72,11 @@ function create_list(elem)
 			item.addEventListener('click', function()
 			{
 				// select the option in the original selection
-				option.selected = true;
-				RPGUI.fire_event(elem, "change");
+				if (!elem.disabled)
+				{
+					option.selected = true;
+					RPGUI.fire_event(elem, "change");
+				}
 			});
 
 		})(elem, option, item, list, all_items);

@@ -7,7 +7,7 @@
 var RPGUI = RPGUI || {};
 
 // lib version
-RPGUI.version = 1.02;
+RPGUI.version = 1.03;
 
 // author
 RPGUI.author = "Ronen Ness";

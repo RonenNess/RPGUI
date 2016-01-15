@@ -50,7 +50,7 @@ function create_radio(elem)
 	// validate
 	if (!new_radio || new_radio.tagName !== "LABEL")
 	{
-		throw "After an '" + _radio_class + "' there must be a label!";
+		throw "After a '" + _radio_class + "' there must be a label!";
 	}
 
 	// copy all event listeners and events
@@ -61,8 +61,10 @@ function create_radio(elem)
 	{
 		new_radio.addEventListener("click", function()
 		{
-			RPGUI.set_value(elem, true);
-
+			if (!elem.disabled)
+			{
+				RPGUI.set_value(elem, true);
+			}
 		});
 	})(elem, new_radio);
 }

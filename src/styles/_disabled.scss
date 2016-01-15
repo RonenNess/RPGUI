@@ -1,0 +1,22 @@
+/**
+* for disabled elements
+*/
+
+/* disabled object */
+.rpgui-disabled,
+.rpgui-content :disabled,
+.rpgui-content input[type=radio]:disabled + label,
+.rpgui-content input[type=checkbox]:disabled + label,
+.rpgui-content input[type=range]:disabled + .rpgui-slider-container,
+.rpgui-content :disabled + .rpgui-dropdown-imp,
+.rpgui-content :disabled + .rpgui-dropdown-imp + .rpgui-dropdown-imp,
+.rpgui-content :disabled + .rpgui-list-imp
+{
+  cursor: url("img/cursor/default.png"), auto;
+  -webkit-filter: grayscale(1);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(#greyscale);
+  filter: gray;
+  color: #999;
+}

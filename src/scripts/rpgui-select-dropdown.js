@@ -97,8 +97,11 @@ function create_dropdown(elem)
 		// when clicking the selected header show / hide the options list
 		select_header.onclick = function()
 		{
-			var prev = list.style.display;
-			list.style.display = prev == "none" ? "block" : "none";
+			if (!elem.disabled)
+			{
+				var prev = list.style.display;
+				list.style.display = prev == "none" ? "block" : "none";
+			}
 		}
 
 		// when mouse leave the options list, hide it
