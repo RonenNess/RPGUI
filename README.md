@@ -438,6 +438,23 @@ node_modules\.bin\gulp dist
 
 ## Changelog
 
+### 1.02
+
+- Switched to gulp and scss.
+- Some sizing modification.
+- Fixed dropdown when nothing is selected.
+- Improved containers border slice.
+- Fixed bug in sliders min val.
+- Added "disabled" css.
+- Added "rotated" css.
+
+### 1.01
+
+- Updated checkbox and buttons images.
+- Code refactoring - init queue and global anonymous function for namespace.
+- Added option to register to RPGUI.on_load()
+- Bug fix when trying to create empty list.
+
 ## Credits
 
 - PRGUI default theme uses the public-domain graphics made by Buch, aka Michele Bucelli ()http://opengameart.org/users/buch).
