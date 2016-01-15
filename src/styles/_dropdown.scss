@@ -8,7 +8,7 @@
 .rpgui-dropdown
 {
 	/* font */
-    text-shadow: 0 2px black;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     color: white;
 
 	/* default size */
@@ -53,7 +53,7 @@ ul.rpgui-dropdown-imp
 .rpgui-dropdown-imp li
 {
 	/* font */
-    text-shadow: 0 2px black;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     color: white;
 	height: 16px;
 
