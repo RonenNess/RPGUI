@@ -59,7 +59,7 @@ inside your html file.
   background-position: center;
   background-size: 100% 100%;
   /* font size */
-  font-size: 1.2em;
+  font-size: 1.0em;
   /* default size and display */
   max-width: 100%;
   min-width: 140px;
@@ -135,7 +135,7 @@ inside your html file.
   background-size: 100% 100%;
   margin: 0 0 0 0;
   right: 0px;
-  top: -46px;
+  top: -2.9em;
   float: right;
   margin-right: -46px;
   margin-top: -5px;
@@ -223,8 +223,7 @@ inside your html file.
   image-rendering: -o-crisp-edges;
   image-rendering: pixelated;
   /* default font */
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.8em; }
+  font-family: 'Press Start 2P', cursive; }
 
 /**
 * customized divs (containers) and framed objects (background and frame image).
@@ -397,8 +396,7 @@ ul.rpgui-dropdown-imp {
   min-height: 22px !important;
   padding: 5px 10px 0 10px !important;
   margin: 0 0 0 0 !important;
-  position: relative !important;
-  font-size: 1.0em; }
+  position: relative !important; }
 
 /* dropdown options */
 .rpgui-dropdown-imp li {
@@ -550,7 +548,6 @@ ul.rpgui-dropdown-imp {
   /* font */
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
-  font-size: 12px;
   /* default size */
   min-height: 40px;
   margin-top: 0px;
@@ -580,7 +577,6 @@ ul.rpgui-list-imp {
   /* font */
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
-  font-size: 12px;
   height: 16px;
   margin-left: 5px !important;
   /* remove the dot */
@@ -613,9 +609,9 @@ ul.rpgui-list-imp {
 .rpgui-content h1 {
   /* color and border */
   color: white;
-  font-weight: 1;
+  font-weight: bold;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 1.25em;
+  font-size: 1.12em;
   /* center text */
   text-align: center;
   /* padding */
@@ -628,7 +624,7 @@ ul.rpgui-list-imp {
   color: white;
   font-weight: bold;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 1.2em;
+  font-size: 1.0em;
   /* center text */
   text-align: center;
   /* padding */
@@ -641,7 +637,7 @@ ul.rpgui-list-imp {
   color: white;
   font-weight: 1;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 1.0em;
+  font-size: 0.9em;
   text-decoration: underline;
   /* center text */
   text-align: center;
@@ -655,7 +651,7 @@ ul.rpgui-list-imp {
   color: white;
   font-weight: 1;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 0.9em;
+  font-size: 0.8em;
   text-decoration: underline;
   /* center text */
   text-align: center;
@@ -668,7 +664,7 @@ ul.rpgui-list-imp {
   /* color and border */
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 1.15em;
+  font-size: 0.8em;
   line-height: 22px; }
 
 /* default span */
@@ -676,7 +672,7 @@ ul.rpgui-list-imp {
   /* color and border */
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 1.0em;
+  font-size: 0.8em;
   line-height: 22px; }
 
 /* default gui link */
@@ -684,7 +680,7 @@ ul.rpgui-list-imp {
   /* color and border */
   color: yellow;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 1.0em;
+  font-size: 0.8em;
   line-height: 22px;
   text-decoration: none; }
 
@@ -697,7 +693,7 @@ ul.rpgui-list-imp {
   /* color and border */
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 1.0em;
+  font-size: 0.8em;
   line-height: 20px;
   display: inline; }
 
@@ -707,7 +703,7 @@ ul.rpgui-list-imp {
   margin-left: 20px;
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 1.0em;
+  font-size: 0.8em;
   line-height: 22px; }
 
 /*
