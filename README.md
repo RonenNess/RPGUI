@@ -440,6 +440,13 @@ node_modules\.bin\gulp dist
 
 ## Changelog
 
+### 1.03
+
+- Added full support in "disabled" attribute.
+- New grabbing cursor.
+- Fixed some font size problems.
+- Improved buttons css.
+
 ### 1.02
 
 - Switched to gulp and scss.

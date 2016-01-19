@@ -61,13 +61,18 @@ label
     cursor: url("img/cursor/select.png") 10 0, auto;
 }
 
-
-
-
 /* for grabbing stuff */
 /* this rule is for when you specifically request this cursor class */
 .rpgui-cursor-grab-open,
 .rpgui-cursor-grab-open *
 {
     cursor: url("img/cursor/grab-open.png") 10 0, auto !important;
+}
+
+/* for grabbing stuff */
+/* this rule is for when you specifically request this cursor class */
+.rpgui-cursor-grab-close,
+.rpgui-cursor-grab-close *
+{
+    cursor: url("img/cursor/grab-close.png") 10 0, auto !important;
 }
