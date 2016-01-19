@@ -62,3 +62,12 @@ label
 }
 
 
+
+
+/* for grabbing stuff */
+/* this rule is for when you specifically request this cursor class */
+.rpgui-cursor-grab-open,
+.rpgui-cursor-grab-open *
+{
+    cursor: url("img/cursor/grab-open.png") 10 0, auto !important;
+}
