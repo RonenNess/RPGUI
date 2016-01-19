@@ -1,5 +1,7 @@
 # RPGUI
-CSS &amp; JavaScript lib to easily create old-school RPG style GUI for web games!
+Lightweight framework for old-school RPG GUI in web!
+
+[Live examples here](http://ronenness.github.io/RPGUI/)
 
 ## Table of Contents
 

@@ -25,6 +25,7 @@
 /* center things */
 .rpgui-center {
     text-align: center;
+    align-content: center;
 }
 
 /* rotate object 90 degrees */
@@ -42,3 +43,4 @@
     -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
     transform-origin: 0% 50%;
 }
+

@@ -34,6 +34,7 @@
 }
 
 /* button hover */
+.rpgui-button.hover,
 .rpgui-button:hover {
 
 	background-image: url("img/button-hover.png");
@@ -41,6 +42,7 @@
 }
 
 /* button clicked */
+.rpgui-button.down,
 .rpgui-button:active {
 
 	background-image: url("img/button-down.png");
@@ -52,7 +54,7 @@
     display: inline-block
 }
 
-/* button style */
+/* golden button style */
 .rpgui-button.golden {
 
 	/* hide button default stuff */
@@ -83,12 +85,14 @@
 }
 
 /* button hover */
+.rpgui-button.golden.hover,
 .rpgui-button.golden:hover {
 
 	background-image: url("img/button-golden-hover.png");
 }
 
 /* button clicked */
+.rpgui-button.golden.down,
 .rpgui-button.golden:active {
 
 	background-image: url("img/button-golden-down.png");

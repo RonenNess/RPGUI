@@ -28,7 +28,8 @@ inside your html file.
 
 /* center things */
 .rpgui-center {
-  text-align: center; }
+  text-align: center;
+  align-content: center; }
 
 /* rotate object 90 degrees */
 .rpgui-rotate-90 {
@@ -74,10 +75,12 @@ inside your html file.
   padding-right: 35px; }
 
 /* button hover */
+.rpgui-button.hover,
 .rpgui-button:hover {
   background-image: url("img/button-hover.png"); }
 
 /* button clicked */
+.rpgui-button.down,
 .rpgui-button:active {
   background-image: url("img/button-down.png"); }
 
@@ -85,7 +88,7 @@ inside your html file.
 .rpgui-button.golden p {
   display: inline-block; }
 
-/* button style */
+/* golden button style */
 .rpgui-button.golden {
   /* hide button default stuff */
   background-color: Transparent;
@@ -111,10 +114,12 @@ inside your html file.
   overflow: visible; }
 
 /* button hover */
+.rpgui-button.golden.hover,
 .rpgui-button.golden:hover {
   background-image: url("img/button-golden-hover.png"); }
 
 /* button clicked */
+.rpgui-button.golden.down,
 .rpgui-button.golden:active {
   background-image: url("img/button-golden-down.png"); }
 
