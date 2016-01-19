@@ -64,13 +64,18 @@
         <hr>
 		<br /><br />
 		<div id="examples">
+		
 			<h1 style="font-size:150%">Examples</h1>
 			<p>Below are examples of key elements in RPGUI. Scroll down or choose from the list to view an example:</p>
 			<ul>
 				<li><a href="#containers">Containers</a></li>
 				<li><a href="#paragraphs">Paragraphs & Text Input</a></li>
 				<li><a href="#buttons">Buttons</a></li>
+				<li><a href="#radio-and-check">Radio & Checkbox</a></li>
+				<li><a href="#drop-and-list">Dropdown & Lists</a></li>
+				
 			</ul>
+			
 			
 			<div id="containers" class="rpgui-container framed-grey">
 				<h1>Containers</h1>
@@ -95,6 +100,7 @@
 				</div>
 				
 			</div>
+			
 			
 			<div id="paragraphs" class="rpgui-container framed-grey">
 				<h1>Paragraphs & Text Input</h1>
@@ -125,13 +131,112 @@
 				<h1>Buttons</h1>
 				<p>This example shows the basic buttons.</p>
 				<hr />
-				<button type="button" class="rpgui-button"><p>Regular button</p></button>
-				<button type="button" class="rpgui-button golden"><p>Golden button</p></button>
-				
+				<div class="rpgui-center" style="float:left; width: 49%">
+					<button type="button" class="rpgui-button"><p>Regular button</p></button>
+					<button type="button" class="rpgui-button down" active><p>Button pressed</p></button>
+					<button type="button" class="rpgui-button hover" active><p>Button hover</p></button>
+				</div>
+				<div class="rpgui-center" style="float:right; width: 49%">
+					<button type="button" class="rpgui-button golden"><p>Golden button</p></button>
+					<button type="button" class="rpgui-button golden down"><p>Golden down</p></button>
+					<button type="button" class="rpgui-button golden hover"><p>Golden hover</p></button>
+				</div>
+				<div style="clear:both"></div>
 			</div>
 			
-		</div>
+			
+			<div id="radio-and-check" class="rpgui-container framed-grey">
+				<h1>Radio and Check boxes</h1>
+				<p>This example shows radio buttons and check boxes.</p>
+				<hr />
+				
+				<div style="float:left; width: 24.5%">
+					<input class="rpgui-checkbox" type="checkbox" checked><label>Checkbox 1.</label>
+					<input class="rpgui-checkbox" type="checkbox"><label>Checkbox 2.</label>
+					<input class="rpgui-checkbox" type="checkbox"><label>Checkbox 3.</label>
+				</div>
+				<div style="float:left; width: 24.5%">
+					<input class="rpgui-checkbox golden" type="checkbox" checked><label>Checkbox 1.</label>
+					<input class="rpgui-checkbox golden" type="checkbox"><label>Checkbox 2.</label>
+					<input class="rpgui-checkbox golden" type="checkbox"><label>Checkbox 3.</label>
+				</div>
+				<div style="float:left; width: 24.5%">
+					<input class="rpgui-radio" name="radio" value="1" checked type="radio"><label>Radio 1</label>
+					<input class="rpgui-radio" name="radio" value="2" type="radio"><label>Radio 2</label>
+					<input class="rpgui-radio" name="radio" value="3" type="radio"><label>Radio 3</label>
+				</div>
+				<div style="float:left; width: 24.5%">
+					<input class="rpgui-radio golden" name="radio-golden" value="1" checked type="radio"><label>Radio 1</label>
+					<input class="rpgui-radio golden" name="radio-golden" value="2" type="radio"><label>Radio 2</label>
+					<input class="rpgui-radio golden" name="radio-golden" value="3" type="radio"><label>Radio 3</label>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+			
+				
+			<div id="drop-and-list" class="rpgui-container framed-grey">
+				<h1>Dropdown & Lists</h1>
+				<p>This example shows the dropdown (aka combobox) and the list widgets. These elements are made from simple "select" with "options" and rpgui class.</p>
+				<hr />
+				<div style="float:left; width: 40%">
+					<p>Dropdown:</p>
+					<select class="rpgui-dropdown">
+						<option value="Warrior" selected>Warrior</option>
+						<option value="Mage">Mage</option>
+						<option value="Rogue">Rogue</option>
+						<option value="Ranger">Ranger</option>
+					</select>
+				</div>
+				<div style="float:right; width: 40%">
+					<p>List:</p>
+					<select class="rpgui-list" id="background-select" size="5">
+						<option value="Blacksmith">Blacksmith</option>
+						<option value="Merchant">Merchant</option>
+						<option value="City Guard">City Guard</option>
+						<option value="Alchemist">Alchemist</option>
+						<option value="Explorer">Explorer</option>
+						<option value="Thug">Thug</option>
+						<option value="Mercenary">Mercenary</option>
+						<option value="Royalty">Royalty</option>
+						<option value="Gladiator">Gladiator</option>
+					</select>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+			
+			
+			<div id="icons" class="rpgui-container rpgui-center framed-grey">
+				<h1>Icons</h1>
+				<p>This example shows the built-in icons. These can be easily extended.</p>
+				<hr />
+				
+				<div class="rpgui-icon sword"></div>
+				<div class="rpgui-icon shield"></div>
+				<div class="rpgui-icon exclamation"></div>
+				<br /><br />
 
+				<div class="rpgui-icon potion-red"></div>
+				<div class="rpgui-icon potion-green"></div>
+				<div class="rpgui-icon potion-blue"></div>
+				<br /><br />
+
+				<div class="rpgui-icon weapon-slot"></div>
+				<div class="rpgui-icon shield-slot"></div>
+				<div class="rpgui-icon armor-slot"></div>
+				<br /><br />
+
+				<div class="rpgui-icon helmet-slot"></div>
+				<div class="rpgui-icon ring-slot"></div>
+				<div class="rpgui-icon potion-slot"></div>
+				<br /><br />
+
+				<div class="rpgui-icon magic-slot"></div>
+				<div class="rpgui-icon shoes-slot"></div>
+				<div class="rpgui-icon empty-slot"></div>
+			</div>
+			
+			
+		</div>
       </div>
 	 </div>
 	</div>
