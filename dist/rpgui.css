@@ -26,6 +26,10 @@ inside your html file.
   -ms-user-select: none;
   user-select: none; }
 
+/* center things */
+.rpgui-center {
+  text-align: center; }
+
 /* rotate object 90 degrees */
 .rpgui-rotate-90 {
   /* rotate 90 degrees */
@@ -78,6 +82,9 @@ inside your html file.
   background-image: url("img/button-down.png"); }
 
 /* golden button stuff */
+.rpgui-button.golden p {
+  display: inline-block; }
+
 /* button style */
 .rpgui-button.golden {
   /* hide button default stuff */
@@ -116,30 +123,29 @@ inside your html file.
   display: inline-block;
   content: "";
   width: 34px;
-  height: 60px;
+  display: block;
+  height: 110%;
   background: transparent url("img/button-golden-left.png") no-repeat right center;
   background-size: 100% 100%;
   margin: 0 0 0 0;
   left: 0px;
   float: left;
   margin-left: -46px;
-  margin-top: -5px; }
+  margin-top: -5%; }
 
 .rpgui-button.golden:after {
   white-space: nowrap;
-  display: inline-block;
+  display: block;
   content: "";
   width: 34px;
-  height: 60px;
+  height: 110%;
   background: transparent url("img/button-golden-right.png") no-repeat left center;
   background-size: 100% 100%;
   margin: 0 0 0 0;
   right: 0px;
-  top: -2.9em;
   float: right;
   margin-right: -46px;
-  margin-top: -5px;
-  position: relative; }
+  margin-top: -5%; }
 
 /*
 .rpgui-button.golden:hover:before {
@@ -198,7 +204,8 @@ inside your html file.
   left: 0px;
   top: 0px;
   position: fixed;
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: 0.8em; }
 
 /* general rules to apply on anything inside the content */
 .rpgui-content * {
@@ -615,9 +622,8 @@ ul.rpgui-list-imp {
 .rpgui-content h1 {
   /* color and border */
   color: white;
-  font-weight: bold;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 1.12em;
+  font-size: 1.14em;
   /* center text */
   text-align: center;
   /* padding */
@@ -628,9 +634,8 @@ ul.rpgui-list-imp {
 .rpgui-content h2 {
   /* color and border */
   color: white;
-  font-weight: bold;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 1.0em;
+  font-size: 1.25em;
   /* center text */
   text-align: center;
   /* padding */
@@ -643,7 +648,7 @@ ul.rpgui-list-imp {
   color: white;
   font-weight: 1;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 0.9em;
+  font-size: 1.15em;
   text-decoration: underline;
   /* center text */
   text-align: center;
@@ -657,7 +662,7 @@ ul.rpgui-list-imp {
   color: white;
   font-weight: 1;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 0.8em;
+  font-size: 1.0em;
   text-decoration: underline;
   /* center text */
   text-align: center;
@@ -670,7 +675,7 @@ ul.rpgui-list-imp {
   /* color and border */
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 0.8em;
+  font-size: 1.0em;
   line-height: 22px; }
 
 /* default span */
@@ -678,7 +683,7 @@ ul.rpgui-list-imp {
   /* color and border */
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 0.8em;
+  font-size: 1.0em;
   line-height: 22px; }
 
 /* default gui link */
@@ -686,7 +691,7 @@ ul.rpgui-list-imp {
   /* color and border */
   color: yellow;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 0.8em;
+  font-size: 1.0em;
   line-height: 22px;
   text-decoration: none; }
 
@@ -699,7 +704,7 @@ ul.rpgui-list-imp {
   /* color and border */
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 0.8em;
+  font-size: 1.0em;
   line-height: 20px;
   display: inline; }
 
@@ -709,7 +714,7 @@ ul.rpgui-list-imp {
   margin-left: 20px;
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 0.8em;
+  font-size: 1.0em;
   line-height: 22px; }
 
 /*

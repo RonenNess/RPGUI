@@ -47,7 +47,10 @@
 }
 
 /* golden button stuff */
-
+.rpgui-button.golden p
+{
+    display: inline-block
+}
 
 /* button style */
 .rpgui-button.golden {
@@ -91,38 +94,39 @@
 	background-image: url("img/button-golden-down.png");
 }
 
-.rpgui-button.golden:before {
+.rpgui-button.golden:before
+{
 
     white-space: nowrap;
     display: inline-block;
     content: "";
     width: 34px;
-    height: 60px;
+    display: block;
+    height: 110%;
     background: transparent url('img/button-golden-left.png') no-repeat right center;
     background-size: 100% 100%;
     margin: 0 0 0 0;
     left: 0px;
     float: left;
     margin-left: -46px;
-    margin-top: -5px;
+    margin-top: -5%;
 }
 
-.rpgui-button.golden:after {
+.rpgui-button.golden:after
+{
 
     white-space: nowrap;
-    display: inline-block;
+    display: block;
     content: "";
     width: 34px;
-    height: 60px;
+    height: 110%;
     background: transparent url('img/button-golden-right.png') no-repeat left center;
     background-size: 100% 100%;
     margin: 0 0 0 0;
     right: 0px;
-    top: -2.9em;
     float: right;
     margin-right: -46px;
-    margin-top: -5px;
-    position: relative;
+    margin-top: -5%;
 }
 
 /*
