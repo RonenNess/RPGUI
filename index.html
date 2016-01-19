@@ -39,6 +39,7 @@
   <body>
   <div class="rpgui-content" style="overflow-y:scroll;">
     <div id="container">
+	  <div id="main"></div>
       <div class="inner rpgui-container framed" style="position:relative">
 
         <header>
@@ -76,6 +77,11 @@
 				<li><a href="#buttons">Buttons</a></li>
 				<li><a href="#radio-and-check">Radio & Checkbox</a></li>
 				<li><a href="#drop-and-list">Dropdown & Lists</a></li>
+				<li><a href="#icons">Icons</a></li>
+				<li><a href="#sliders">Sliders</a></li>
+				<li><a href="#progress">Progress bar</a></li>
+				<li><a href="#disabled">Disabled Elements</a></li>
+				<li><a href="#cursors">Cursors</a></li>
 				
 			</ul>
 			
@@ -213,6 +219,8 @@
 				<p>This example shows the built-in icons. These can be easily extended.</p>
 				<hr />
 				
+				<img src="images/skelly2.png" style="display:inline-block; width:160px;bottom: 0;left: 0px;position: absolute;">
+				<img src="images/skelly2.png" style="display:inline-block; width:160px;bottom: 0;right: 0px;position: absolute;transform: scaleX(-1);">
 				<div class="rpgui-icon sword"></div>
 				<div class="rpgui-icon shield"></div>
 				<div class="rpgui-icon exclamation"></div>
@@ -239,6 +247,172 @@
 			</div>
 			
 			
+			<div id="sliders" class="rpgui-container rpgui-center framed-grey">
+				<h1>Sliders</h1>
+				<p>This example shows the sliders class, which replaces the "range" input element.</p>
+				<hr />
+				
+				<div style="width: 60%; margin-left: 20%">
+					<label>Slider:</label>
+					<input class="rpgui-slider" type="range" min="0" max="10" value="5" style="width:100%">
+					<br /><br />
+					<label>Golden slider:</label>
+					<input class="rpgui-slider golden" type="range" min="0" max="10" value="5" style="width:100%">
+				</div>
+				
+			</div>
+			
+			
+			<div id="progress" class="rpgui-container framed-grey">
+				<h1>Progress Bars</h1>
+				<p>This example shows the RPGUI progress bar class.</p>
+				<hr />
+				
+				<div style="width: 40%; margin-left: 30%">
+				
+					<label>Health:</label>
+					<div id="hp-bar" data-value="0.4" class="rpgui-progress red"></div>
+					<label>Mana:</label>
+					<div id="mana-bar" data-value="0.8" class="rpgui-progress blue"></div>
+					<label>Stamina:</label>
+					<div id="stamina-bar" data-value="0.2" class="rpgui-progress green"></div>
+					<label>Experience:</label>
+					<div id="stamina-bar" data-value="0.5" class="rpgui-progress"></div>
+				</div>
+				
+			</div>
+		
+			
+			<div id="disabled" class="rpgui-container framed-grey">
+				<h1>Disabled Elements</h1>
+				<p>All RPGUI elements can be disabled using the "disable" attribute. Here's an example of disabled RPGUI elements.</p>
+				<hr />
+
+				<!-- simple inputs -->
+				<div style="width:42%; float:left;">
+					<h1>Text Input</h1>
+
+					<label>Your hero name:</label>
+					<input disabled type="text" name="FirstName" value="Bob" placeholder="Hero name">
+					<br/><br/>
+
+					<label>Your hero last name:</label>
+					<input disabled type="text" name="FirstName" value="The Destroyer" placeholder="Hero last name">
+					<br /><br />
+
+					<label>Your hero bio:</label>
+					<textarea disabled rows="3" cols="50">Bob The Destroyer likes to destroy stuff.</textarea>
+						
+					<h1>Sliders:</h1>
+					<input disabled class="rpgui-slider" type="range" min="0" max="10" value="8" style="width:100%">
+					<p>Golden slider:</p>
+					<input disabled class="rpgui-slider golden" type="range" min="1" max="5" value="3" style="width:100%">
+					
+					<h1>Icons</h1>
+					<div class="rpgui-center">
+						<div class="rpgui-icon rpgui-disabled sword"></div>
+						<div class="rpgui-icon rpgui-disabled shield"></div>
+						<div class="rpgui-icon rpgui-disabled exclamation"></div>
+						<br /><br />
+
+						<div class="rpgui-icon rpgui-disabled potion-red"></div>
+						<div class="rpgui-icon rpgui-disabled potion-green"></div>
+						<div class="rpgui-icon rpgui-disabled potion-blue"></div>
+						<br /><br />
+
+						<div class="rpgui-icon rpgui-disabled weapon-slot"></div>
+						<div class="rpgui-icon rpgui-disabled shield-slot"></div>
+						<div class="rpgui-icon rpgui-disabled armor-slot"></div>
+						<br /><br />
+
+						<div class="rpgui-icon rpgui-disabled helmet-slot"></div>
+						<div class="rpgui-icon rpgui-disabled ring-slot"></div>
+						<div class="rpgui-icon rpgui-disabled potion-slot"></div>
+						<br /><br />
+
+						<div class="rpgui-icon rpgui-disabled magic-slot"></div>
+						<div class="rpgui-icon rpgui-disabled shoes-slot"></div>
+						<div class="rpgui-icon rpgui-disabled empty-slot"></div>
+						<br /><br />
+					</div>
+				</div>
+					
+				<div style="width:42%; float:right;">
+					<h1>Buttons</h1>
+
+					<button disabled class="rpgui-button" type="button" style="width:100%"><p>Button</p></button>
+					<br /><br />
+					<button disabled class="rpgui-button golden" type="button" style="width:100%"><p>Gold Button</p></button>
+					<br /><br />
+
+					<h1>Radio/Check</h1>
+					<br />
+					<div>
+						<input disabled class="rpgui-radio" checked type="radio" name="sex" value="male"><label>Male</label>
+						<br />
+						<input disabled class="rpgui-radio" type="radio" name="sex" value="female"><label>Female</label>
+						<br />
+					</div>
+					<div>
+						<input disabled class="rpgui-radio golden" checked type="radio" name="sex2" value="male"><label>Male</label>
+						<br />
+						<input disabled class="rpgui-radio golden" type="radio" name="sex2" value="female"><label>Female</label>
+						<br />
+					</div>
+					<br />
+					
+					<input disabled class="rpgui-checkbox" type="checkbox" checked><label>Checkbox 1.</label>
+					<br />
+					<input disabled class="rpgui-checkbox" type="checkbox"><label>Checkbox 2.</label>
+					
+					<h1>Dropdown</h1>
+					<select disabled class="rpgui-dropdown">
+						<option value="Warrior" selected>Warrior</option>
+						<option value="Mage">Mage</option>
+						<option value="Rogue">Rogue</option>
+						<option value="Ranger">Ranger</option>
+					</select>
+
+					<h1>RPGUI list:</h1>
+					<select disabled class="rpgui-list" id="background-select" size="4">
+						<option value="Blacksmith">Blacksmith</option>
+						<option value="Merchant">Merchant</option>
+						<option value="City Guard">City Guard</option>
+						<option value="Alchemist">Alchemist</option>
+						<option value="Explorer">Explorer</option>
+						<option value="Thug">Thug</option>
+						<option value="Mercenary">Mercenary</option>
+						<option value="Royalty">Royalty</option>
+						<option value="Gladiator">Gladiator</option>
+					</select>
+
+					<h1>Progress bar:</h1>
+					<div id="hp-bar" data-value="0.4" class="rpgui-progress rpgui-disabled red"></div>
+				</div>
+				
+				<div style="clear:both"></div>
+			</div>
+			
+			
+						
+			<div id="cursors" class="rpgui-container framed-grey rpgui-center">
+				<h1>Cursors</h1>
+				<p>This example shows the basic cursors.</p>
+				<hr />
+				<button type="button" class="rpgui-button rpgui-cursor-default" style="width:30%"><p>Default</p></button>
+				<button type="button" class="rpgui-button rpgui-cursor-point" style="width:30%"><p>Pointer</p></button>
+				<button type="button" class="rpgui-button rpgui-cursor-select" style="width:30%"><p>Text Select</p></button>
+				<button type="button" class="rpgui-button rpgui-cursor-grab-open" style="width:30%"><p>Grab Open</p></button>
+				<button type="button" class="rpgui-button rpgui-cursor-grab-close" style="width:30%"><p>Grab Close</p></button>
+			</div>
+			
+			<br /><br /><br /><br />
+			<div class="rpgui-center">
+				<h1 style="font-size:150%">That's it, for now!</h1>
+				<p>Check out the <a href="https://github.com/RonenNess/RPGUI">RPGUI git</a> for more info!</p>
+				<br /><br />
+				<a href="#main">- Back to Top -</a>
+			</div>
 		</div>
       </div>
 	 </div>
