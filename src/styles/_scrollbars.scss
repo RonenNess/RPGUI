@@ -3,26 +3,34 @@
 */
 
 /* set scrollbars for webkit browsers (like chrome) */
-.rpgui-content ::-webkit-scrollbar {
+.rpgui-content ::-webkit-scrollbar,
+.rpgui-content::-webkit-scrollbar
+{
     width: 18px;
 }
 
 /* Track */
-.rpgui-content ::-webkit-scrollbar-track {
+.rpgui-content ::-webkit-scrollbar-track,
+.rpgui-content::-webkit-scrollbar-track
+{
     background-image:url('img/scrollbar-track.png');
     background-size: 18px 60px;
     background-repeat: repeat-y;
 }
 
 /* Handle */
-.rpgui-content ::-webkit-scrollbar-thumb {
+.rpgui-content ::-webkit-scrollbar-thumb,
+.rpgui-content::-webkit-scrollbar-thumb
+{
     background-image:url('img/scrollbar-thumb.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 /* buttons */
-.rpgui-content ::-webkit-scrollbar-button {
+.rpgui-content ::-webkit-scrollbar-button,
+.rpgui-content::-webkit-scrollbar-button
+{
 	background-image:url('img/scrollbar-button.png');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
