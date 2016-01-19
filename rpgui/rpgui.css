@@ -5,7 +5,6 @@ If not supported you can add backup via:
 inside your html file.
 */
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
-
 /**
 * Customized scrollbars
 */
@@ -29,9 +28,8 @@ inside your html file.
 
 /* center things */
 .rpgui-center {
-  text-align: center; 
-  align-content: center;
-  }
+  text-align: center;
+  align-content: center; }
 
 /* rotate object 90 degrees */
 .rpgui-rotate-90 {
@@ -90,7 +88,7 @@ inside your html file.
 .rpgui-button.golden p {
   display: inline-block; }
 
-/* button style */
+/* golden button style */
 .rpgui-button.golden {
   /* hide button default stuff */
   background-color: Transparent;
@@ -377,6 +375,12 @@ label {
 .rpgui-cursor-grab-open,
 .rpgui-cursor-grab-open * {
   cursor: url("img/cursor/grab-open.png") 10 0, auto !important; }
+
+/* for grabbing stuff */
+/* this rule is for when you specifically request this cursor class */
+.rpgui-cursor-grab-close,
+.rpgui-cursor-grab-close * {
+  cursor: url("img/cursor/grab-close.png") 10 0, auto !important; }
 
 /**
 * Customized dropdown with rpgui design.
