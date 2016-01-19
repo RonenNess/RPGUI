@@ -3,29 +3,55 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+
+	<link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+	
+	<!-- RPGUI -->
+	<link rel="stylesheet" type="text/css" href="rpgui/rpgui.css">
+	<script src="rpgui/rpgui.min.js"></script>
+	
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Rpgui by RonenNess</title>
+    <title>RPGUI - RPG-style gui in HTML5!</title>
   </head>
 
+  <style>
+	body,
+	#container
+	{
+		background: #333;
+	}
+	
+	.inner
+	{
+		background: #444;
+		padding-left:20px;
+		padding-right:20px;
+		min-width: 740px;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+  </style>
+  
   <body>
+  <div class="rpgui-content" style="overflow-y:scroll;">
     <div id="container">
-      <div class="inner">
+      <div class="inner rpgui-container framed" style="position:relative">
 
         <header>
           <h1>Rpgui</h1>
+		  <hr class="golden" />
           <h2>CSS &amp; JavaScript lib to easily create old-school RPG style GUI for web games!</h2>
         </header>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/RonenNess/RPGUI/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/RonenNess/RPGUI/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/RonenNess/RPGUI" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        <section id="downloads" class="clearfix" style="text-align:center; align: center">
+          <a href="https://github.com/RonenNess/RPGUI/zipball/master">	<button type="button" class="rpgui-button"><p>Download .zip</p></button></a>
+          <a href="https://github.com/RonenNess/RPGUI/tarball/master">	<button type="button" class="rpgui-button"><p>Download .tar.gz</p></button></a>
+          <a href="https://github.com/RonenNess/RPGUI">					<button type="button" class="rpgui-button"><p>View on GitHub</p></button></a>
         </section>
 
         <hr>
@@ -513,5 +539,6 @@ For anything else, feel free to contact me: <a href="mailto:ronenness@gmail.com"
         
       </div>
     </div>
+	</div>
   </body>
 </html>

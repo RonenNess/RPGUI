@@ -89,11 +89,6 @@ header h2 {
   background: transparent url(../images/highlight-bg.jpg) 50% 0 no-repeat;
 }
 
-.inner {
-  width: 620px;
-  margin: 0 auto;
-}
-
 #container .inner img {
   max-width: 100%;
 }
@@ -199,15 +194,6 @@ ul, ol, dl {
 
 /* COMMON STYLES */
 
-hr {
-  height: 1px;
-  padding-bottom: 1em;
-  margin-top: 1em;
-  line-height: 1px;
-  background: transparent url('../images/hr.png') 50% 0 no-repeat;
-  border: none;
-}
-
 strong {
   font-weight: bold;
 }
@@ -274,10 +260,12 @@ h6 {
   color: #303030;
 }
 
+/*
 p {
   margin-bottom: 20px;
   font-weight: 300;
 }
+*/
 
 a {
   text-decoration: none;
