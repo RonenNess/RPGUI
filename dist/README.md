@@ -1,7 +1,7 @@
 # RPGUI
 Lightweight framework for old-school RPG GUI in web!
 
-[Live examples here](http://ronenness.github.io/RPGUI/)
+### [Live examples here](http://ronenness.github.io/RPGUI/)
 
 ## What is it?
 This framework provide out-of-the-box GUI for web games with old-school RPG style.
@@ -34,9 +34,7 @@ RPGUI should work on all modern browsers, tested and confirmed on Chrome, FireFo
 
 ## How to use
 
-RPGUI docs can be found at the github repo:
-
-[RPGUI Manual](https://github.com/RonenNess/RPGUI#rpgui)
+RPGUI docs can be found at the [github repo](https://github.com/RonenNess/RPGUI#rpgui), or you can watch some live example [here](http://ronenness.github.io/RPGUI/).
 
 ## Credits
 
