@@ -13,10 +13,11 @@ Lightweight framework for old-school RPG GUI in web!
 - [Contact Me](#contact-me)
 
 ## What is it?
-This lib contains css rules and JavaScript code to easily generate gui for web games with old-school RPG style.
-Once including this lib you just need to create html elements with the rpgui classes, and everything should work and build-up into an awesome gui! 
+This framework provide out-of-the-box GUI for web games with old-school RPG style.
+Once including this lib all you need to do is start adding regular html elements with RPGUI classes, and RPGUI will do all the rest!
 
 ![alt tag](https://raw.githubusercontent.com/RonenNess/RPGUI/master/screenshot.jpg)
+(Image is slightly outdated.)
 
 ## Key Features
 The following are the key features of RPGUI:
@@ -409,6 +410,21 @@ There's a golden variation to the radio you can use for fancier graphics:
 <input class="rpgui-radio golden" type="radio" value="some val"><label>This is a golden radio button!</label>
 ```
 
+#### Cursors
+
+RPGUI comes with few built-in cursors you can use. To set an alternative cursor for an element, add one of the following css classes to it:
+
+- rpgui-cursor-default
+- rpgui-cursor-point
+- rpgui-cursor-select
+- rpgui-cursor-grab-open
+- rpgui-cursor-grab-close
+
+#### Disabled elements
+
+RPGUI supports the "disabled" attribute.
+You can set any element to be disabled just as you would with plain html elements, and it will be greyed out and impossible to set.
+
 ## How to Tweak
 
 To change RPGUI into your own theme the easiest thing to do is to replace the images in dist/img/ folder.
@@ -471,12 +487,10 @@ node_modules\.bin\gulp dist
 	
 ## License
 
-RPGUI is provided under the zlib-license, and is absolutely free for use for educational & commercial purposes.
+RPGUI is distributed under the zlib-license, and is absolutely free for use in any purpose (personal, educational, commercial, etc..).
 See LICENSE.txt for more info.
 
 ## Contact Me
 
 For issues / bugs use the Report Issue button.
 For anything else, feel free to contact me: ronenness@gmail.com.
-
-
