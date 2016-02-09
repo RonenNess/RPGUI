@@ -1,7 +1,9 @@
 # RPGUI
 Lightweight framework for old-school RPG GUI in web!
 
-### [Live examples here](http://ronenness.github.io/RPGUI/)
+## Live example
+
+Live examples can be found [here](http://ronenness.github.io/RPGUI/).
 
 ## What is it?
 This framework provide out-of-the-box GUI for web games with old-school RPG style.
