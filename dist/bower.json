@@ -1,0 +1,27 @@
+{
+  "name": "RPGUI",
+  "version": "1.0.3",
+  "homepage": "https://github.com/RonenNess/RPGUI",
+  "authors": [
+    "Ronen Ness <ronenness@gmail.com>"
+  ],
+  "description": "Lightweight framework for old-school RPG GUI in web!",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "gui",
+    "rpg",
+    "game",
+    "interface",
+    "ui"
+  ],
+  "license": "Zlib",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
