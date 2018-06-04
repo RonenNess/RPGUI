@@ -19,6 +19,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ronen Ness",
-  "license": "Zlib"
+  "license": "Zlib",
   "homepage": "http://ronenness.github.io/RPGUI/",
 }
