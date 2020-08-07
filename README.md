@@ -511,6 +511,3 @@ See LICENSE.txt for more info.
 
 For issues / bugs use the Report Issue button.
 For anything else, feel free to contact me: ronenness@gmail.com.
-
-
-[issue-12]: https://github.com/RonenNess/RPGUI/issues/12
