@@ -82,7 +82,7 @@ RPGUI is mainly CSS rules with some background JavaScript code to support some e
 
 Most of the RPGUI elements are just plain HTML elements with RPGUI classes, but some elements are more complicated and are generated at runtime by the RPGUI JavaScript.
 
-Weather its a simple element or a complex one, all RPGUI elements are created by adding css class to base elements and you shouldn't use any code to create elements (unless you need to create them dynamically after page load).
+Whether it's a simple element or a complex one, all RPGUI elements are created by adding css class to base elements and you shouldn't use any code to create elements (unless you need to create them dynamically after page load).
 All JavaScript events should work normally on RPGUI elements, and you should get / set elements value in the same way you would with normal HTML elements.
 
 ### Helper functions
