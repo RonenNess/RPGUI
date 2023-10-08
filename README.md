@@ -17,6 +17,7 @@ Lightweight framework for old-school RPG GUI in web!
 - [What is it?](#what-is-it)
 - [Key Features](#key-features)
 - [How to use](#how-to-use)
+- [Angular users](#angular-users)
 - [How to tweak](#how-to-tweak)
 - [License](#license)
 - [Contact Me](#contact-me)
@@ -67,6 +68,22 @@ Include the files from the html header, like this:
 
 **The best way to understand PRGUI is to look at the included example and just copy their HTML.** 
 But if you prefer reading material, here's a tutorial that explains about the basic elements of RPGUI and how to use them.
+
+## Angular users
+
+If you are using Angular you may want to include following snippet to your `angular.json`.
+
+```json
+"assets": [
+  "src/favicon.ico",
+  "src/assets"
+],
+"styles": [
+  "src/styles.css",
+  "dist/rpgui.css"
+],
+"scripts": []
+```
 
 ### RPGUI Tutorial
 
